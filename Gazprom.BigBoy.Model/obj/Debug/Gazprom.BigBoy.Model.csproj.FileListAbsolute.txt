@@ -8,3 +8,5 @@ c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.SqlServer.dll
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.xml
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.SqlServer.xml
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\Gazprom.BigBoy.Model.Migrations.initial.resources
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\Gazprom.BigBoy.Model.csproj.GenerateResource.Cache

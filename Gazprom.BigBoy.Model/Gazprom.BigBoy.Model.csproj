@@ -49,6 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Location.cs" />
+    <Compile Include="Migrations\201509011500590_initial.cs" />
+    <Compile Include="Migrations\201509011500590_initial.Designer.cs">
+      <DependentUpon>201509011500590_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountablePOS.cs" />
     <Compile Include="Models\AccountableSB.cs" />
     <Compile Include="Models\AutoFlow.cs" />
@@ -244,6 +249,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509011500590_initial.resx">
+      <DependentUpon>201509011500590_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
