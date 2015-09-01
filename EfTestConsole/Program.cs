@@ -15,6 +15,8 @@ namespace EfTestConsole
         static void Main(string[] args)
         {
 
+            //SqlScriptGenerator.GenerateScript();
+
             HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
 
             // ------------------------ Lazy vs Deep load EF queries ----------------------------------//
