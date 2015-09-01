@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using EfTestConsole.Helpers;
+using EfTestConsole.Demonstration;
 
 namespace EfTestConsole
 {
@@ -17,7 +18,7 @@ namespace EfTestConsole
             HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
 
             // ------------------------ Lazy vs Deep load EF queries ----------------------------------//
-
+            EfQueryGeneration.ShowSelect();
             
 
         }

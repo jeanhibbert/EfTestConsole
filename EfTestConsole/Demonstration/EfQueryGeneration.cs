@@ -69,7 +69,7 @@ namespace EfTestConsole.Demonstration
             Console.ReadKey();
 
 
-            //Deep load select in anonymous type
+            //Deep load select into anonymous type
             using (GasNominations_Endur_prodContext context = new GasNominations_Endur_prodContext())
             {
                 var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
@@ -87,7 +87,7 @@ namespace EfTestConsole.Demonstration
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 
-            //Deep load select in anonymous type
+            //Deep load select in anonymous type with specifying referenced entity fields
             using (GasNominations_Endur_prodContext context = new GasNominations_Endur_prodContext())
             {
                 var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
