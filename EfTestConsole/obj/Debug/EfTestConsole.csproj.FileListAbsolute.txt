@@ -12,3 +12,5 @@ c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EntityFramework.SqlServ
 c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EntityFramework.xml
 c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EntityFramework.SqlServer.xml
 c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\HibernatingRhinos.Profiler.Appender.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\Gazprom.Data.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\Gazprom.Data.pdb

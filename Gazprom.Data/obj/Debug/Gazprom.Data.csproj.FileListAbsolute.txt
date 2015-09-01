@@ -10,3 +10,5 @@ c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\bin\Debug\EntityFramework.SqlServe
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.csprojResolveAssemblyReference.cache
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.dll
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.pdb
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.Migrations.initial.resources
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.csproj.GenerateResource.Cache

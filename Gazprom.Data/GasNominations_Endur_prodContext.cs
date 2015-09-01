@@ -1,8 +1,10 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+
+using Gazprom.BigBoy.Model.Models;
 using Gazprom.BigBoy.Model.Models.Mapping;
 
-namespace Gazprom.BigBoy.Model.Models
+namespace Gazprom.Data
 {
     public partial class GasNominations_Endur_prodContext : DbContext
     {

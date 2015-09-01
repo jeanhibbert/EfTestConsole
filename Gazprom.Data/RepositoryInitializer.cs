@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gazprom.BigBoy.Model.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -24,17 +25,17 @@ namespace Gazprom.Data
             Database.DefaultConnectionFactory = new SqlCeConnectionFactory("System.Data.SqlServerCe.4.0");
 
             // Sets the default database initialization code for working with Sql Server Compact databases
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<EFTestDbContext>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<GasNominations_Endur_prodContext>());
         }
 
-        protected EFTestDbContext Context
+        protected GasNominations_Endur_prodContext Context
         {
-            get { return (EFTestDbContext)this.unitOfWork; }
+            get { return (GasNominations_Endur_prodContext)this.unitOfWork; }
         }
 
         public void Initialize()
         {
-            this.Context.Set<TimeZone>().ToList().Count();
+            this.Context.Set<GasLocation>().ToList().Count();
 
             var indexes = this.Context.Database.SqlQuery<string>("SELECT INDEX_NAME FROM INFORMATION_SCHEMA.INDEXES;");
 

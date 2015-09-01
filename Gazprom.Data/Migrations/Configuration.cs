@@ -1,18 +1,18 @@
-namespace Gazprom.BigBoy.Model.Migrations
+namespace Gazprom.Data.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Gazprom.BigBoy.Model.Models.GasNominations_Endur_prodContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Gazprom.Data.GasNominations_Endur_prodContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Gazprom.BigBoy.Model.Models.GasNominations_Endur_prodContext context)
+        protected override void Seed(Gazprom.Data.GasNominations_Endur_prodContext context)
         {
             //  This method will be called after migrating to the latest version.
 

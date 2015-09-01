@@ -1,4 +1,4 @@
-namespace Gazprom.BigBoy.Model.Migrations
+namespace Gazprom.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
