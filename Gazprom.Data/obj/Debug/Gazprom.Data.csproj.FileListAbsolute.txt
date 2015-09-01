@@ -12,3 +12,4 @@ c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.dll
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.pdb
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.Migrations.initial.resources
 c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.csproj.GenerateResource.Cache
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.Data\obj\Debug\Gazprom.Data.Migrations.NewPermisionsTableAdded.resources

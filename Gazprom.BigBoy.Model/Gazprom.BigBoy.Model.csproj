@@ -204,6 +204,7 @@
     <Compile Include="Models\NominationVolumes_Archive.cs" />
     <Compile Include="Models\Nomination_Archive.cs" />
     <Compile Include="Models\NomRenomWindow.cs" />
+    <Compile Include="Models\Permission.cs" />
     <Compile Include="Models\PhysicalTradeView.cs" />
     <Compile Include="Models\PipelineView.cs" />
     <Compile Include="Models\PositionAdjustView.cs" />

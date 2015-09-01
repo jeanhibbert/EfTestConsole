@@ -68,6 +68,10 @@ namespace Gazprom.Data
         public DbSet<NominationVolume> NominationVolumes { get; set; }
         public DbSet<NominationVolumes_Archive> NominationVolumes_Archive { get; set; }
         public DbSet<NomRenomWindow> NomRenomWindows { get; set; }
+
+        // New Permissions table
+        public DbSet<Permission> Permissions { get; set; }
+
         public DbSet<PositionCheck> PositionChecks { get; set; }
         public DbSet<RawISISCapacityMessage> RawISISCapacityMessages { get; set; }
         public DbSet<Role> Roles { get; set; }

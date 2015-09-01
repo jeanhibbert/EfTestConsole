@@ -11,5 +11,6 @@ namespace Gazprom.BigBoy.Model.Models
         public string Comment { get; set; }
         public virtual Role Role1 { get; set; }
         public virtual User User1 { get; set; }
+        public virtual ICollection<Permission> Permissions {get; set;}
     }
 }
