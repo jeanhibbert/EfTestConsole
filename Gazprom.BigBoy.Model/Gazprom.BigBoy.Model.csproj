@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A9129A4-A568-4E68-A4F0-5FA7856288FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gazprom.BigBoy.Model</RootNamespace>
+    <AssemblyName>Gazprom.BigBoy.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Location.cs" />
+    <Compile Include="Models\AccountablePOS.cs" />
+    <Compile Include="Models\AccountableSB.cs" />
+    <Compile Include="Models\AutoFlow.cs" />
+    <Compile Include="Models\BalancingType.cs" />
+    <Compile Include="Models\CapacityDayCheck.cs" />
+    <Compile Include="Models\CapacityInstrumentType.cs" />
+    <Compile Include="Models\CapacityRouteLeg.cs" />
+    <Compile Include="Models\CapacityTradeMultiLegRoute.cs" />
+    <Compile Include="Models\CapacityTradeView.cs" />
+    <Compile Include="Models\CommodityType.cs" />
+    <Compile Include="Models\ConfirmationAnomoly.cs" />
+    <Compile Include="Models\EndurCapacityProduct.cs" />
+    <Compile Include="Models\EndurInstrumentType.cs" />
+    <Compile Include="Models\EndurVolumeType.cs" />
+    <Compile Include="Models\EnomMessageField.cs" />
+    <Compile Include="Models\Entitlement.cs" />
+    <Compile Include="Models\ExternalCapacityLocationMapping.cs" />
+    <Compile Include="Models\ExternalCapacityLocationMappingAudit.cs" />
+    <Compile Include="Models\FlowLineNameMapping.cs" />
+    <Compile Include="Models\GasLocation.cs" />
+    <Compile Include="Models\GasLocationGCV.cs" />
+    <Compile Include="Models\GasLocationGCVView.cs" />
+    <Compile Include="Models\GasLocationInstrumentMapping.cs" />
+    <Compile Include="Models\GasLocationMapping.cs" />
+    <Compile Include="Models\GasNetwork.cs" />
+    <Compile Include="Models\GasNetworkDisplayCapacityProduct.cs" />
+    <Compile Include="Models\GasNominations_Endur_prodContext.cs" />
+    <Compile Include="Models\GasPipeline.cs" />
+    <Compile Include="Models\GasShipper.cs" />
+    <Compile Include="Models\GasTradeAdjustProfile.cs" />
+    <Compile Include="Models\GasTradeDetailEndur.cs" />
+    <Compile Include="Models\GasTradePositionAdjust.cs" />
+    <Compile Include="Models\GasTradePositionEndur.cs" />
+    <Compile Include="Models\GasTradePositionEndurExclusion.cs" />
+    <Compile Include="Models\GasTransit.cs" />
+    <Compile Include="Models\GasTransitView.cs" />
+    <Compile Include="Models\GeminiCapacityTradeView.cs" />
+    <Compile Include="Models\GeminiDataUpdatedView.cs" />
+    <Compile Include="Models\GTSDataSendInformation.cs" />
+    <Compile Include="Models\GxpMapping.cs" />
+    <Compile Include="Models\InternalShipping.cs" />
+    <Compile Include="Models\ISISCapacityTradeView.cs" />
+    <Compile Include="Models\KeyPerformanceIndicator.cs" />
+    <Compile Include="Models\LocationMappingView.cs" />
+    <Compile Include="Models\LocationType.cs" />
+    <Compile Include="Models\LocationView.cs" />
+    <Compile Include="Models\Mapping\AccountablePOSMap.cs" />
+    <Compile Include="Models\Mapping\AccountableSBMap.cs" />
+    <Compile Include="Models\Mapping\AutoFlowMap.cs" />
+    <Compile Include="Models\Mapping\BalancingTypeMap.cs" />
+    <Compile Include="Models\Mapping\CapacityDayCheckMap.cs" />
+    <Compile Include="Models\Mapping\CapacityInstrumentTypeMap.cs" />
+    <Compile Include="Models\Mapping\CapacityRouteLegMap.cs" />
+    <Compile Include="Models\Mapping\CapacityTradeMultiLegRouteMap.cs" />
+    <Compile Include="Models\Mapping\CapacityTradeViewMap.cs" />
+    <Compile Include="Models\Mapping\CommodityTypeMap.cs" />
+    <Compile Include="Models\Mapping\ConfirmationAnomolyMap.cs" />
+    <Compile Include="Models\Mapping\EndurCapacityProductMap.cs" />
+    <Compile Include="Models\Mapping\EndurInstrumentTypeMap.cs" />
+    <Compile Include="Models\Mapping\EndurVolumeTypeMap.cs" />
+    <Compile Include="Models\Mapping\EnomMessageFieldMap.cs" />
+    <Compile Include="Models\Mapping\EntitlementMap.cs" />
+    <Compile Include="Models\Mapping\ExternalCapacityLocationMappingAuditMap.cs" />
+    <Compile Include="Models\Mapping\ExternalCapacityLocationMappingMap.cs" />
+    <Compile Include="Models\Mapping\FlowLineNameMappingMap.cs" />
+    <Compile Include="Models\Mapping\GasLocationGCVMap.cs" />
+    <Compile Include="Models\Mapping\GasLocationGCVViewMap.cs" />
+    <Compile Include="Models\Mapping\GasLocationInstrumentMappingMap.cs" />
+    <Compile Include="Models\Mapping\GasLocationMap.cs" />
+    <Compile Include="Models\Mapping\GasLocationMappingMap.cs" />
+    <Compile Include="Models\Mapping\GasNetworkDisplayCapacityProductMap.cs" />
+    <Compile Include="Models\Mapping\GasNetworkMap.cs" />
+    <Compile Include="Models\Mapping\GasPipelineMap.cs" />
+    <Compile Include="Models\Mapping\GasShipperMap.cs" />
+    <Compile Include="Models\Mapping\GasTradeAdjustProfileMap.cs" />
+    <Compile Include="Models\Mapping\GasTradeDetailEndurMap.cs" />
+    <Compile Include="Models\Mapping\GasTradePositionAdjustMap.cs" />
+    <Compile Include="Models\Mapping\GasTradePositionEndurExclusionMap.cs" />
+    <Compile Include="Models\Mapping\GasTradePositionEndurMap.cs" />
+    <Compile Include="Models\Mapping\GasTransitMap.cs" />
+    <Compile Include="Models\Mapping\GasTransitViewMap.cs" />
+    <Compile Include="Models\Mapping\GeminiCapacityTradeViewMap.cs" />
+    <Compile Include="Models\Mapping\GeminiDataUpdatedViewMap.cs" />
+    <Compile Include="Models\Mapping\GTSDataSendInformationMap.cs" />
+    <Compile Include="Models\Mapping\GxpMappingMap.cs" />
+    <Compile Include="Models\Mapping\InternalShippingMap.cs" />
+    <Compile Include="Models\Mapping\ISISCapacityTradeViewMap.cs" />
+    <Compile Include="Models\Mapping\KeyPerformanceIndicatorMap.cs" />
+    <Compile Include="Models\Mapping\LocationMappingViewMap.cs" />
+    <Compile Include="Models\Mapping\LocationTypeMap.cs" />
+    <Compile Include="Models\Mapping\LocationViewMap.cs" />
+    <Compile Include="Models\Mapping\MultiLegCapacityTradeMappingMap.cs" />
+    <Compile Include="Models\Mapping\NadAccountMap.cs" />
+    <Compile Include="Models\Mapping\NearRealtimeAllocationMap.cs" />
+    <Compile Include="Models\Mapping\NetworkTypeMap.cs" />
+    <Compile Include="Models\Mapping\NetworkViewMap.cs" />
+    <Compile Include="Models\Mapping\NominationMap.cs" />
+    <Compile Include="Models\Mapping\NominationMessagesViewMap.cs" />
+    <Compile Include="Models\Mapping\NominationParameterMap.cs" />
+    <Compile Include="Models\Mapping\NominationShipperMap.cs" />
+    <Compile Include="Models\Mapping\NominationShipper_ArchiveMap.cs" />
+    <Compile Include="Models\Mapping\NominationSystemTypeMap.cs" />
+    <Compile Include="Models\Mapping\NominationValidationMap.cs" />
+    <Compile Include="Models\Mapping\NominationVolumeMap.cs" />
+    <Compile Include="Models\Mapping\NominationVolumes_ArchiveMap.cs" />
+    <Compile Include="Models\Mapping\Nomination_ArchiveMap.cs" />
+    <Compile Include="Models\Mapping\NomRenomWindowMap.cs" />
+    <Compile Include="Models\Mapping\PhysicalTradeViewMap.cs" />
+    <Compile Include="Models\Mapping\PipelineViewMap.cs" />
+    <Compile Include="Models\Mapping\PositionAdjustViewMap.cs" />
+    <Compile Include="Models\Mapping\PositionCheckMap.cs" />
+    <Compile Include="Models\Mapping\RawISISCapacityMessageMap.cs" />
+    <Compile Include="Models\Mapping\RoleMap.cs" />
+    <Compile Include="Models\Mapping\SBSBufferZoneMap.cs" />
+    <Compile Include="Models\Mapping\SecurityRoleMap.cs" />
+    <Compile Include="Models\Mapping\SendInformationMap.cs" />
+    <Compile Include="Models\Mapping\SendTypeMap.cs" />
+    <Compile Include="Models\Mapping\ServiceHeartbeatMap.cs" />
+    <Compile Include="Models\Mapping\ShipperPreliminaryBalanceMap.cs" />
+    <Compile Include="Models\Mapping\StatusMap.cs" />
+    <Compile Include="Models\Mapping\SystemConfigurationMap.cs" />
+    <Compile Include="Models\Mapping\TimezoneMap.cs" />
+    <Compile Include="Models\Mapping\TimezoneViewMap.cs" />
+    <Compile Include="Models\Mapping\TradeCancellationViewMap.cs" />
+    <Compile Include="Models\Mapping\TransitFlowMapperMap.cs" />
+    <Compile Include="Models\Mapping\TransitRouteAuditMap.cs" />
+    <Compile Include="Models\Mapping\TransitRouteLegAuditMap.cs" />
+    <Compile Include="Models\Mapping\TransitRouteLegMap.cs" />
+    <Compile Include="Models\Mapping\TransitRouteMap.cs" />
+    <Compile Include="Models\Mapping\UkLocationMappingViewMap.cs" />
+    <Compile Include="Models\Mapping\UnitConversionMap.cs" />
+    <Compile Include="Models\Mapping\UnitConversionViewMap.cs" />
+    <Compile Include="Models\Mapping\UnitMap.cs" />
+    <Compile Include="Models\Mapping\UserMap.cs" />
+    <Compile Include="Models\Mapping\UserRoleMap.cs" />
+    <Compile Include="Models\Mapping\UserRolesViewMap.cs" />
+    <Compile Include="Models\Mapping\ValidationTypeMap.cs" />
+    <Compile Include="Models\Mapping\vw_NominationShipper_AllMap.cs" />
+    <Compile Include="Models\Mapping\vw_NominationVolumes_AllMap.cs" />
+    <Compile Include="Models\Mapping\vw_Nomination_AllMap.cs" />
+    <Compile Include="Models\MultiLegCapacityTradeMapping.cs" />
+    <Compile Include="Models\NadAccount.cs" />
+    <Compile Include="Models\NearRealtimeAllocation.cs" />
+    <Compile Include="Models\NetworkType.cs" />
+    <Compile Include="Models\NetworkView.cs" />
+    <Compile Include="Models\Nomination.cs" />
+    <Compile Include="Models\NominationMessagesView.cs" />
+    <Compile Include="Models\NominationParameter.cs" />
+    <Compile Include="Models\NominationShipper.cs" />
+    <Compile Include="Models\NominationShipper_Archive.cs" />
+    <Compile Include="Models\NominationSystemType.cs" />
+    <Compile Include="Models\NominationValidation.cs" />
+    <Compile Include="Models\NominationVolume.cs" />
+    <Compile Include="Models\NominationVolumes_Archive.cs" />
+    <Compile Include="Models\Nomination_Archive.cs" />
+    <Compile Include="Models\NomRenomWindow.cs" />
+    <Compile Include="Models\PhysicalTradeView.cs" />
+    <Compile Include="Models\PipelineView.cs" />
+    <Compile Include="Models\PositionAdjustView.cs" />
+    <Compile Include="Models\PositionCheck.cs" />
+    <Compile Include="Models\RawISISCapacityMessage.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\SBSBufferZone.cs" />
+    <Compile Include="Models\SecurityRole.cs" />
+    <Compile Include="Models\SendInformation.cs" />
+    <Compile Include="Models\SendType.cs" />
+    <Compile Include="Models\ServiceHeartbeat.cs" />
+    <Compile Include="Models\ShipperPreliminaryBalance.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\SystemConfiguration.cs" />
+    <Compile Include="Models\Timezone.cs" />
+    <Compile Include="Models\TimezoneView.cs" />
+    <Compile Include="Models\TradeCancellationView.cs" />
+    <Compile Include="Models\TransitFlowMapper.cs" />
+    <Compile Include="Models\TransitRoute.cs" />
+    <Compile Include="Models\TransitRouteAudit.cs" />
+    <Compile Include="Models\TransitRouteLeg.cs" />
+    <Compile Include="Models\TransitRouteLegAudit.cs" />
+    <Compile Include="Models\UkLocationMappingView.cs" />
+    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\UnitConversion.cs" />
+    <Compile Include="Models\UnitConversionView.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\UserRolesView.cs" />
+    <Compile Include="Models\ValidationType.cs" />
+    <Compile Include="Models\vw_NominationShipper_All.cs" />
+    <Compile Include="Models\vw_NominationVolumes_All.cs" />
+    <Compile Include="Models\vw_Nomination_All.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timezone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

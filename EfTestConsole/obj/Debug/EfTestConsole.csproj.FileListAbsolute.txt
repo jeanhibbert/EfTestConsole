@@ -1,0 +1,14 @@
+C:\Users\jhibbert\AppData\Local\Temporary Projects\EfTestConsole\bin\Debug\EfTestConsole.exe.config
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EfTestConsole.exe.config
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EfTestConsole.exe
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EfTestConsole.pdb
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\Gazprom.BigBoy.Model.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\Gazprom.BigBoy.Model.pdb
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\obj\Debug\EfTestConsole.csprojResolveAssemblyReference.cache
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\obj\Debug\EfTestConsole.exe
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\obj\Debug\EfTestConsole.pdb
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EntityFramework.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EntityFramework.SqlServer.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EntityFramework.xml
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\EntityFramework.SqlServer.xml
+c:\IT_DEVCODE\Temp\EfTestConsole\EfTestConsole\bin\Debug\HibernatingRhinos.Profiler.Appender.dll

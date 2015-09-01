@@ -1,0 +1,10 @@
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\Gazprom.BigBoy.Model.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\Gazprom.BigBoy.Model.pdb
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\Gazprom.BigBoy.Model.csprojResolveAssemblyReference.cache
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\Gazprom.BigBoy.Model.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\Gazprom.BigBoy.Model.pdb
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\Gazprom.BigBoy.Model.dll.config
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.SqlServer.dll
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.xml
+c:\IT_DEVCODE\Temp\EfTestConsole\Gazprom.BigBoy.Model\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTestConsole", "EfTestConsole\EfTestConsole.csproj", "{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gazprom.BigBoy.Model", "Gazprom.BigBoy.Model\Gazprom.BigBoy.Model.csproj", "{6A9129A4-A568-4E68-A4F0-5FA7856288FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gazprom.Data", "Gazprom.Data\Gazprom.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9129A4-A568-4E68-A4F0-5FA7856288FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9129A4-A568-4E68-A4F0-5FA7856288FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9129A4-A568-4E68-A4F0-5FA7856288FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9129A4-A568-4E68-A4F0-5FA7856288FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
