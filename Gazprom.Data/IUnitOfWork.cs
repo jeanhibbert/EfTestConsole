@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gazprom.Data
+namespace AdventureWorks.Data
 {
     public interface IUnitOfWork
     {

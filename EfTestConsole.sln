@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTestConsole", "EfTestCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTest.AdventureWorks.Model", "Gazprom.BigBoy.Model\EfTest.AdventureWorks.Model.csproj", "{6A9129A4-A568-4E68-A4F0-5FA7856288FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gazprom.Data", "Gazprom.Data\Gazprom.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Data", "Gazprom.Data\AdventureWorks.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED30C4C1-56D7-4332-9467-A654CDEED818}"
 	ProjectSection(SolutionItems) = preProject

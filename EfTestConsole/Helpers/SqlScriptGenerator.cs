@@ -1,5 +1,4 @@
-﻿using Gazprom.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Data.Entity.Migrations.Infrastructure;

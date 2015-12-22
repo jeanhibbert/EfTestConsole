@@ -72,9 +72,9 @@
       <Project>{6a9129a4-a568-4e68-a4f0-5fa7856288ff}</Project>
       <Name>EfTest.AdventureWorks.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gazprom.Data\Gazprom.Data.csproj">
+    <ProjectReference Include="..\Gazprom.Data\AdventureWorks.Data.csproj">
       <Project>{0401ffbc-cbcc-42a4-9c36-f3573bde14f7}</Project>
-      <Name>Gazprom.Data</Name>
+      <Name>AdventureWorks.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

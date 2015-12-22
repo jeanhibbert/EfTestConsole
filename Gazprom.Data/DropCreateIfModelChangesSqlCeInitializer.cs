@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gazprom.Data
+namespace AdventureWorks.Data
 {
     //internal class DropCreateIfModelChangesSqlCeInitializer<TContext> : SqlCeInitializer<TContext>
     //    where TContext : DbContext
