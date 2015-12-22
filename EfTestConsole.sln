@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTestConsole", "EfTestConsole\EfTestConsole.csproj", "{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTest.AdventureWorks.Model", "Gazprom.BigBoy.Model\EfTest.AdventureWorks.Model.csproj", "{6A9129A4-A568-4E68-A4F0-5FA7856288FF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Data", "Gazprom.Data\AdventureWorks.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED30C4C1-56D7-4332-9467-A654CDEED818}"
 	ProjectSection(SolutionItems) = preProject
 		Readme.md = Readme.md
@@ -18,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{97D418
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTest.AdventureWorks.Model", "EfTest.AdventureWorks.Model\EfTest.AdventureWorks.Model.csproj", "{6A9129A4-A568-4E68-A4F0-5FA7856288FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Data", "AdventureWorks.Data\AdventureWorks.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

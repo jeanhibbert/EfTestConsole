@@ -68,13 +68,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Gazprom.BigBoy.Model\EfTest.AdventureWorks.Model.csproj">
+    <ProjectReference Include="..\EfTest.AdventureWorks.Model\EfTest.AdventureWorks.Model.csproj">
       <Project>{6a9129a4-a568-4e68-a4f0-5fa7856288ff}</Project>
       <Name>EfTest.AdventureWorks.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Gazprom.Data\AdventureWorks.Data.csproj">
-      <Project>{0401ffbc-cbcc-42a4-9c36-f3573bde14f7}</Project>
-      <Name>AdventureWorks.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

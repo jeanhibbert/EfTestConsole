@@ -15,14 +15,14 @@ namespace EfTestConsole.Demonstration
             //Lazy load entity
             using (var context = new AdventureWorksContext())
             {
-                var contacts = context.Contacts.Take(10)
-                    .Select(s => s);
+                var products = context.Products.Take(10)
+                    .Select(p => p);
 
-                foreach (var c in contacts)
+                foreach (var p in products)
                 {
-                    Console.WriteLine(c.ContactID);
-                    Console.WriteLine(c.EmailAddress);
-                    Console.WriteLine(c.Individuals.Any()); // Causes an additional database hit
+                    Console.WriteLine(p.ProductID);
+                    Console.WriteLine(p.ProductSubcategory);
+                    Console.WriteLine(p.ProductSubcategory.ProductCategoryID); // Causes an additional database hit
                     Console.WriteLine("----------------------------------------------");
                 }
             }
@@ -34,13 +34,13 @@ namespace EfTestConsole.Demonstration
             //Deep load entity
             using (var context = new AdventureWorksContext())
             {
-                var employees = context.Contacts.Include("Employees").Take(10)
+                var products = context.Products.Include("ProductSubcategory").Take(10)
                     .Select(s => s);
 
-                foreach (var e in employees)
+                foreach (var e in products)
                 {
-                    Console.WriteLine(e.Employees.Count);
-                    //Console.WriteLine(e.Employees.Name); // Does not cause an additional database hit
+                    Console.WriteLine(e.ProductID);
+                    Console.WriteLine(e.ProductSubcategory.ProductCategoryID); // Does not cause an additional database hit
                     Console.WriteLine("----------------------------------------------");
                 }
             }
@@ -54,52 +54,34 @@ namespace EfTestConsole.Demonstration
             //Select with projection using anonymous type
             using (var context = new AdventureWorksContext())
             {
-                //var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
-                //    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered });
+                var products = context.Products.Take(10)
+                    .Select(s => new { s.ProductID, s.ProductSubcategory.Name });
 
-                //foreach (var spb in shipperPreliminaryBalances)
-                //{
-                //    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                //    Console.WriteLine(spb.SumRequestedDailyMetered);
-                //    Console.WriteLine("----------------------------------------------");
-                //}
+                foreach (var e in products)
+                {
+                    Console.WriteLine(e.ProductID);
+                    Console.WriteLine(e.Name); // Does not cause an additional database hit
+                    Console.WriteLine("----------------------------------------------");
+                }
             }
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 
 
-            //Deep load select into anonymous type
+            //View caching behaviour
             using (var context = new AdventureWorksContext())
             {
-                //var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
-                //    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered, s.NominationSystemType });
+                var products = context.Products.Take(10)
+                    .Select(p => p);
 
-                //foreach (var spb in shipperPreliminaryBalances)
-                //{
-                //    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                //    Console.WriteLine(spb.SumRequestedDailyMetered);
-                //    Console.WriteLine(spb.NominationSystemType.Name);
-                //    Console.WriteLine("----------------------------------------------");
-                //}
-            }
-
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-
-            //Deep load select in anonymous type with specifying referenced entity fields
-            using (var context = new AdventureWorksContext())
-            {
-                //var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
-                //    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered, s.NominationSystemType.Name });
-
-                //foreach (var spb in shipperPreliminaryBalances)
-                //{
-                //    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                //    Console.WriteLine(spb.SumRequestedDailyMetered);
-                //    Console.WriteLine(spb.Name);
-                //    Console.WriteLine("----------------------------------------------");
-                //}
+                foreach (var p in products)
+                {
+                    Console.WriteLine(p.ProductID);
+                    Console.WriteLine(p.ProductSubcategory);
+                    Console.WriteLine(p.ProductSubcategory.ProductCategoryID); // Causes an additional database hit
+                    Console.WriteLine("----------------------------------------------");
+                }
             }
 
             Console.WriteLine("Press any key to continue...");
