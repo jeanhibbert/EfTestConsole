@@ -18,6 +18,11 @@ namespace EfTestConsole.Helpers
             return query.Include(path);
         }
 
+        public static PagedList<T> ToPagedList<T>(this IQueryable<T> source, int page, int pageSize)
+        {
+            return new PagedList<T>(source, page, pageSize);
+        }
+
         class PropertyPathVisitor : ExpressionVisitor
         {
             private Stack<string> _stack;
@@ -61,6 +66,8 @@ namespace EfTestConsole.Helpers
                     return false;
                 return Attribute.GetCustomAttribute(method, typeof(ExtensionAttribute)) != null;
             }
+
+
         }
     }
 }

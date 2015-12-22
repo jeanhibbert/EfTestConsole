@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Demonstration\EfQueryGeneration.cs" />
+    <Compile Include="Helpers\IPagedList.cs" />
     <Compile Include="Helpers\ObjectQueryExtensions.cs" />
+    <Compile Include="Helpers\PagedList.cs" />
     <Compile Include="Helpers\SqlScriptGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

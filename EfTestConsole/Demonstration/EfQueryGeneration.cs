@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EfTestConsole.Demonstration
 {
     using EfTest.AdventureWorks.Model.Models;
+
+    using EfTestConsole.Helpers;
 
     public class EfQueryGeneration
     {
@@ -15,14 +14,18 @@ namespace EfTestConsole.Demonstration
             //Lazy load entity
             using (var context = new AdventureWorksContext())
             {
-                var products = context.Products.Take(10)
+                var products = context.Products
+                    .Where(p => p.ProductSubcategory != null).Take(10)
                     .Select(p => p);
 
                 foreach (var p in products)
                 {
                     Console.WriteLine(p.ProductID);
-                    Console.WriteLine(p.ProductSubcategory);
-                    Console.WriteLine(p.ProductSubcategory.ProductCategoryID); // Causes an additional database hit
+                    if (p.ProductSubcategory != null)
+                    {
+                        Console.WriteLine(p.ProductSubcategory);
+                        Console.WriteLine(p.ProductSubcategory.ProductCategoryID); // Causes an additional database hit
+                    }
                     Console.WriteLine("----------------------------------------------");
                 }
             }
@@ -34,7 +37,9 @@ namespace EfTestConsole.Demonstration
             //Deep load entity
             using (var context = new AdventureWorksContext())
             {
-                var products = context.Products.Include("ProductSubcategory").Take(10)
+                var products = context.Products
+                    .Include("ProductSubcategory")
+                    .Where(p => p.ProductSubcategory != null).Take(10)
                     .Select(s => s);
 
                 foreach (var e in products)
@@ -54,8 +59,8 @@ namespace EfTestConsole.Demonstration
             //Select with projection using anonymous type
             using (var context = new AdventureWorksContext())
             {
-                var products = context.Products.Take(10)
-                    .Select(s => new { s.ProductID, s.ProductSubcategory.Name });
+                var products = context.Products.Where(p => p.ProductSubcategory != null).Take(10)
+                    .Select(s => new { s.ProductID, s.Name });
 
                 foreach (var e in products)
                 {
@@ -69,11 +74,11 @@ namespace EfTestConsole.Demonstration
             Console.ReadKey();
 
 
-            //View caching behaviour
+            //View paging behaviour
             using (var context = new AdventureWorksContext())
             {
-                var products = context.Products.Take(10)
-                    .Select(p => p);
+                var products = context.Products.OrderBy(o => o.ProductID)
+                    .ToPagedList(50, 10); ;
 
                 foreach (var p in products)
                 {
