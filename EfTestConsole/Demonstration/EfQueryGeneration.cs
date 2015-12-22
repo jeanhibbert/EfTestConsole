@@ -1,6 +1,4 @@
-﻿using Gazprom.BigBoy.Model.Models;
-using Gazprom.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,21 +6,23 @@ using System.Threading.Tasks;
 
 namespace EfTestConsole.Demonstration
 {
+    using EfTest.AdventureWorks.Model.Models;
+
     public class EfQueryGeneration
     {
         public static void ShowSelect()
         {
             //Lazy load entity
-            using (GasNominations_Endur_prodContext context = new GasNominations_Endur_prodContext())
+            using (var context = new AdventureWorksContext())
             {
-                var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
+                var contacts = context.Contacts.Take(10)
                     .Select(s => s);
 
-                foreach (var spb in shipperPreliminaryBalances)
+                foreach (var c in contacts)
                 {
-                    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                    Console.WriteLine(spb.SumRequestedDailyMetered);
-                    Console.WriteLine(spb.NominationSystemType.Name); // Causes an additional database hit
+                    Console.WriteLine(c.ContactID);
+                    Console.WriteLine(c.EmailAddress);
+                    Console.WriteLine(c.Individuals.Any()); // Causes an additional database hit
                     Console.WriteLine("----------------------------------------------");
                 }
             }
@@ -32,16 +32,15 @@ namespace EfTestConsole.Demonstration
 
 
             //Deep load entity
-            using (GasNominations_Endur_prodContext context = new GasNominations_Endur_prodContext())
+            using (var context = new AdventureWorksContext())
             {
-                var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Include("NominationSystemType").Take(10)
+                var employees = context.Contacts.Include("Employees").Take(10)
                     .Select(s => s);
 
-                foreach (var spb in shipperPreliminaryBalances)
+                foreach (var e in employees)
                 {
-                    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                    Console.WriteLine(spb.SumRequestedDailyMetered);
-                    Console.WriteLine(spb.NominationSystemType.Name); // Does not cause an additional database hit
+                    Console.WriteLine(e.Employees.Count);
+                    //Console.WriteLine(e.Employees.Name); // Does not cause an additional database hit
                     Console.WriteLine("----------------------------------------------");
                 }
             }
@@ -53,17 +52,17 @@ namespace EfTestConsole.Demonstration
             // ------------------------ Anonymous type EF queries ----------------------------------// 
 
             //Select with projection using anonymous type
-            using (GasNominations_Endur_prodContext context = new GasNominations_Endur_prodContext())
+            using (var context = new AdventureWorksContext())
             {
-                var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
-                    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered });
+                //var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
+                //    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered });
 
-                foreach (var spb in shipperPreliminaryBalances)
-                {
-                    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                    Console.WriteLine(spb.SumRequestedDailyMetered);
-                    Console.WriteLine("----------------------------------------------");
-                }
+                //foreach (var spb in shipperPreliminaryBalances)
+                //{
+                //    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
+                //    Console.WriteLine(spb.SumRequestedDailyMetered);
+                //    Console.WriteLine("----------------------------------------------");
+                //}
             }
 
             Console.WriteLine("Press any key to continue...");
@@ -71,36 +70,36 @@ namespace EfTestConsole.Demonstration
 
 
             //Deep load select into anonymous type
-            using (GasNominations_Endur_prodContext context = new GasNominations_Endur_prodContext())
+            using (var context = new AdventureWorksContext())
             {
-                var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
-                    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered, s.NominationSystemType });
+                //var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
+                //    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered, s.NominationSystemType });
 
-                foreach (var spb in shipperPreliminaryBalances)
-                {
-                    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                    Console.WriteLine(spb.SumRequestedDailyMetered);
-                    Console.WriteLine(spb.NominationSystemType.Name);
-                    Console.WriteLine("----------------------------------------------");
-                }
+                //foreach (var spb in shipperPreliminaryBalances)
+                //{
+                //    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
+                //    Console.WriteLine(spb.SumRequestedDailyMetered);
+                //    Console.WriteLine(spb.NominationSystemType.Name);
+                //    Console.WriteLine("----------------------------------------------");
+                //}
             }
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 
             //Deep load select in anonymous type with specifying referenced entity fields
-            using (GasNominations_Endur_prodContext context = new GasNominations_Endur_prodContext())
+            using (var context = new AdventureWorksContext())
             {
-                var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
-                    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered, s.NominationSystemType.Name });
+                //var shipperPreliminaryBalances = context.ShipperPreliminaryBalances.Take(10)
+                //    .Select(s => new { s.ShipperPreliminaryBalanceId, s.SumRequestedDailyMetered, s.NominationSystemType.Name });
 
-                foreach (var spb in shipperPreliminaryBalances)
-                {
-                    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
-                    Console.WriteLine(spb.SumRequestedDailyMetered);
-                    Console.WriteLine(spb.Name);
-                    Console.WriteLine("----------------------------------------------");
-                }
+                //foreach (var spb in shipperPreliminaryBalances)
+                //{
+                //    Console.WriteLine(spb.ShipperPreliminaryBalanceId);
+                //    Console.WriteLine(spb.SumRequestedDailyMetered);
+                //    Console.WriteLine(spb.Name);
+                //    Console.WriteLine("----------------------------------------------");
+                //}
             }
 
             Console.WriteLine("Press any key to continue...");

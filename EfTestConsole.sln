@@ -1,17 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTestConsole", "EfTestConsole\EfTestConsole.csproj", "{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gazprom.BigBoy.Model", "Gazprom.BigBoy.Model\Gazprom.BigBoy.Model.csproj", "{6A9129A4-A568-4E68-A4F0-5FA7856288FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTest.AdventureWorks.Model", "Gazprom.BigBoy.Model\EfTest.AdventureWorks.Model.csproj", "{6A9129A4-A568-4E68-A4F0-5FA7856288FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gazprom.Data", "Gazprom.Data\Gazprom.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED30C4C1-56D7-4332-9467-A654CDEED818}"
 	ProjectSection(SolutionItems) = preProject
 		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{97D41803-B640-4776-AE43-693341D6130D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
 Global

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Gazprom.BigBoy.Model")]
+[assembly: AssemblyTitle("EfTest.AdventureWorks.Model")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Gazprom.BigBoy.Model")]
+[assembly: AssemblyProduct("EfTest.AdventureWorks.Model")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
