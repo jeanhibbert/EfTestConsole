@@ -3,6 +3,8 @@
 - Entity Framework Profiler
 
 # EF Query generation
+- Demonstrate power of the Linq to Enitities LinqProvider
+	- Show Matt Warren's blog / Profile
 - Lazy load entities
 	- Query caching vs. second level caching
 - Deep load entities
