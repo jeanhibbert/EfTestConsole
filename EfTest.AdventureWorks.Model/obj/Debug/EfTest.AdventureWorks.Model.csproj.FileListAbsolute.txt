@@ -8,3 +8,16 @@ D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConso
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\EfTest.AdventurWorks.Model.dll
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\EfTest.AdventurWorks.Model.pdb
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\Gazprom.BigBoy.Model\obj\Debug\EfTest.AdventureWorks.Model.csprojResolveAssemblyReference.cache
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\bin\Debug\EfTest.AdventurWorks.Model.dll.config
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\bin\Debug\EfTest.AdventurWorks.Model.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\bin\Debug\EfTest.AdventurWorks.Model.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\bin\Debug\EntityFramework.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\bin\Debug\EntityFramework.xml
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\obj\Debug\EfTest.AdventureWorks.Model.csprojResolveAssemblyReference.cache
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\obj\Debug\EfTest.AdventurWorks.Model.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\obj\Debug\EfTest.AdventurWorks.Model.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\obj\Debug\EfTest.AdventurWorks.Model.Migrations.initial.resources
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\obj\Debug\EfTest.AdventureWorks.Model.csproj.GenerateResource.Cache
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Model\obj\Debug\EfTest.AdventurWorks.Model.Migrations.NewTableTestEntity1.resources

@@ -1,6 +1,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using EfTest.AdventureWorks.Model.Models.Mapping;
+using EfTest.AdventurWorks.Model.Models;
 
 namespace EfTest.AdventureWorks.Model.Models
 {
@@ -103,6 +104,7 @@ namespace EfTest.AdventureWorks.Model.Models
         public DbSet<vSalesPerson> vSalesPersons { get; set; }
         public DbSet<vSalesPersonSalesByFiscalYear> vSalesPersonSalesByFiscalYears { get; set; }
         public DbSet<vStoreWithDemographic> vStoreWithDemographics { get; set; }
+        public DbSet<TestEntity1> TestEntities { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

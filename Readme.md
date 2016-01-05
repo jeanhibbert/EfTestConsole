@@ -9,12 +9,28 @@
 - Select with projection into an anonymous type - Deep load by exposing referenced entity on anonymous type
 - Select with projection into an anonymous type - referenced entity property identified (Deep load)
 
+# EF Caching
+- DbSet.Find looks up entity from cache by default
+
+
 # EF Code first migration
 - The standard command set
-update-database
-add-migration initial
-enable-migrations -force
-add-migration : creates the file
+	- update-database - Verbose
+	- add-migration [Migration Name]
+	- enable-migrations -force
 
-# Micro ORMs
-- 
+# Concurrent Transactions
+-  http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
+
+# Setup Notes
+- Creating a model from an old database
+download "Entity Framework Power Tools beta 4"
+- Right click on project --> EntityFramework -> re-engineer code first
+	- select DB in dialogue and click generate
+
+- Download EF6 : http://entityframework.codeplex.com/SourceControl/latest
+
+Install-Package xunit.runner.visualstudio
+
+- Download Adventure works DB from
+http://msftdbprodsamples.codeplex.com/

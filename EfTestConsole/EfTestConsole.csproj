@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,7 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demonstration\EfCaching.cs" />
     <Compile Include="Demonstration\EfQueryGeneration.cs" />
+    <Compile Include="Demonstration\EfDbMigrations.cs" />
     <Compile Include="Helpers\IPagedList.cs" />
     <Compile Include="Helpers\ObjectQueryExtensions.cs" />
     <Compile Include="Helpers\PagedList.cs" />

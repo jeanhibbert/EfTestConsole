@@ -19,9 +19,9 @@ namespace EfTestConsole
             HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
 
             // ------------------------ Lazy vs Deep load EF queries ----------------------------------//
-            EfQueryGeneration.ShowSelect();
-            
-
+            //EfQueryGeneration.ShowSelect();
+            //EfCaching.DemonstrateCaching();
+            EfDbMigrations.GenerateSqlUsingDbMigrator();
         }
     }
 }
