@@ -1,5 +1,6 @@
-# EF Power tools
-- Generate code first classes in visual studio
+# Tools
+- EF Power tools: Generate code first classes in visual studio
+- Entity Framework Profiler
 
 # EF Query generation
 - Lazy load entities
@@ -34,3 +35,15 @@ Install-Package xunit.runner.visualstudio
 
 - Download Adventure works DB from
 http://msftdbprodsamples.codeplex.com/
+
+# Performance Enhancement techniques
+- Start up performance
+
+- General performance of save changes
+
+
+# TODO
+- Use EF Profiler in Talk
+- Modifying Transaction block around Select Queries using extension methods
+- Download the EF6 code base and run various unit tests
+	- Demonstrate basic select
