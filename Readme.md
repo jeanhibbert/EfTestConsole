@@ -43,12 +43,22 @@ http://msftdbprodsamples.codeplex.com/
 
 - General performance of save changes
 
+#Testing Entity Framework Using NugetPackages by Rowan Miller
 
-# TODO
+- See test project
+SEE - TODO : COMPLETE
+
+# TODO!!!
 - Use EF Profiler in Talk
 - Modifying Transaction block around Select Queries using extension methods
 - Download the EF6 code base and run various unit tests
 	- Demonstrate basic select
+
+- Complete ProductController Unit Test with MockDbSet
+- Complete/FIX WebApi project with ProductRepository UnitOfWork integration
+- List Performance tricks in PowerPointSlides
+- Complete DB Migration for FullTextSearch
+- Complete Command Interceptor for Soft Deletes
 
 Advanced scenarios
 http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
@@ -56,3 +66,7 @@ http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mv
 
 Getting and building the EF runtime
 https://entityframework.codeplex.com/wikipage?title=Getting%20and%20Building%20EF%20Runtime
+
+# WebApi Entity Framework Scaffolding
+
+- TODO : Complete API with DI and Resitory UnitofWork integration
