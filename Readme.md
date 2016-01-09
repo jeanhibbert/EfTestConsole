@@ -54,6 +54,7 @@ SEE - TODO : COMPLETE
 - Download the EF6 code base and run various unit tests
 	- Demonstrate basic select
 
+- Provide interceptor for logging in EfTestConsole.Config file
 - Complete ProductController Unit Test with MockDbSet
 - Complete/FIX WebApi project with ProductRepository UnitOfWork integration
 - List Performance tricks in PowerPointSlides

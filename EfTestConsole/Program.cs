@@ -20,8 +20,8 @@ namespace EfTestConsole
 
             // ------------------------ Lazy vs Deep load EF queries ----------------------------------//
             //EfQueryGeneration.ShowSelect();
-            //EfCaching.DemonstrateCaching();
-            EfDbMigrations.GenerateSqlUsingDbMigrator();
+            EfCaching.DemonstrateCaching();
+           // EfDbMigrations.GenerateSqlUsingDbMigrator();
         }
     }
 }
