@@ -63,6 +63,8 @@ SEE - TODO : COMPLETE
 - Add Example for DB Execution strategy and logging
 - Add Serilog and Seqlog packages
 
+- Highlight Linq Provider classes and tests
+
 Advanced scenarios
 http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 // Talk about serialisation performance in EF vs Dapper
