@@ -59,6 +59,8 @@ SEE - TODO : COMPLETE
 - List Performance tricks in PowerPointSlides
 - Complete DB Migration for FullTextSearch
 - Complete Command Interceptor for Soft Deletes
+- Add Example for DB Execution strategy and logging
+- Add Serilog and Seqlog packages
 
 Advanced scenarios
 http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
