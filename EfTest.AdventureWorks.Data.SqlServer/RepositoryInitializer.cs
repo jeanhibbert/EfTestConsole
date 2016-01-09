@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdventureWorks.Data
+﻿namespace EfTest.AdventureWorks.Data.SqlServer
 {
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+
     using EfTest.AdventureWorks.Model.Models;
 
     public class RepositoryInitializer
@@ -23,9 +19,7 @@ namespace AdventureWorks.Data
 
             this.unitOfWork = unitOfWork;
 
-            Database.DefaultConnectionFactory = new SqlCeConnectionFactory("System.Data.SqlServerCe.4.0");
-
-            // Sets the default database initialization code for working with Sql Server Compact databases
+            // Sets the default database initialization code for working with Sql Server databases
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<AdventureWorksContext>());
         }
 
@@ -36,7 +30,7 @@ namespace AdventureWorks.Data
 
         public void Initialize()
         {
-            this.Context.Set<AdventureWorksContext>().ToList().Count();
+            this.Context.Set<Product>().ToList().Count();
 
             var indexes = this.Context.Database.SqlQuery<string>("SELECT INDEX_NAME FROM INFORMATION_SCHEMA.INDEXES;");
 

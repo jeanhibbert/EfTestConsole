@@ -1,11 +1,12 @@
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using EfTest.AdventureWorks.Model.Models.Mapping;
-using EfTest.AdventurWorks.Model.Models;
-
-namespace EfTest.AdventureWorks.Model.Models
+namespace EfTest.AdventureWorks.Data.SqlServer
 {
-    public partial class AdventureWorksContext : DbContext
+    using System.Data.Entity;
+
+    using EfTest.AdventureWorks.Model.Models;
+    using EfTest.AdventureWorks.Model.Models.Mapping;
+    using AdventureWorks.Data;
+
+    public partial class AdventureWorksContext : DbContext, IUnitOfWork
     {
         static AdventureWorksContext()
         {
@@ -16,6 +17,14 @@ namespace EfTest.AdventureWorks.Model.Models
             : base("Name=AdventureWorksContext")
         {
         }
+
+        /// <summary>
+        /// Allows saving changes via the IUnitOfWork interface.
+        /// </summary>
+        void IUnitOfWork.SaveChanges()
+        {
+            base.SaveChanges();
+        }  
 
         public DbSet<AWBuildVersion> AWBuildVersions { get; set; }
         public DbSet<DatabaseLog> DatabaseLogs { get; set; }
@@ -104,7 +113,6 @@ namespace EfTest.AdventureWorks.Model.Models
         public DbSet<vSalesPerson> vSalesPersons { get; set; }
         public DbSet<vSalesPersonSalesByFiscalYear> vSalesPersonSalesByFiscalYears { get; set; }
         public DbSet<vStoreWithDemographic> vStoreWithDemographics { get; set; }
-        public DbSet<TestEntity1> TestEntities { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -50,18 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201512281558324_initial.cs" />
-    <Compile Include="Migrations\201512281558324_initial.Designer.cs">
-      <DependentUpon>201512281558324_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512301634257_NewTableTestEntity1.cs" />
-    <Compile Include="Migrations\201512301634257_NewTableTestEntity1.Designer.cs">
-      <DependentUpon>201512301634257_NewTableTestEntity1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AddressType.cs" />
-    <Compile Include="Models\AdventureWorksContext.cs" />
     <Compile Include="Models\AWBuildVersion.cs" />
     <Compile Include="Models\BillOfMaterial.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -209,7 +199,6 @@
     <Compile Include="Models\StateProvince.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\StoreContact.cs" />
-    <Compile Include="Models\TestEntity1.cs" />
     <Compile Include="Models\TransactionHistory.cs" />
     <Compile Include="Models\TransactionHistoryArchive.cs" />
     <Compile Include="Models\UnitMeasure.cs" />
@@ -242,14 +231,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512281558324_initial.resx">
-      <DependentUpon>201512281558324_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512301634257_NewTableTestEntity1.resx">
-      <DependentUpon>201512301634257_NewTableTestEntity1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

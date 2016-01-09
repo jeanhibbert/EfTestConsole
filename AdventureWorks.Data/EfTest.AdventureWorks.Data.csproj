@@ -4,19 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C8F3C825-3925-4EC1-96EE-3D5047EBE89F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EfTestConsole</RootNamespace>
-    <AssemblyName>EfTestConsole</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>EfTest.AdventureWorks.Data</RootNamespace>
+    <AssemblyName>EfTest.AdventureWorks.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,12 +40,8 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HibernatingRhinos.Profiler.Appender">
-      <HintPath>..\ExternalLibraries\HibernatingRhinos.Profiler.Appender.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -57,33 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Demonstration\EfCaching.cs" />
-    <Compile Include="Demonstration\EfProductRepositoryTest.cs" />
-    <Compile Include="Demonstration\EfQueryGeneration.cs" />
-    <Compile Include="Demonstration\EfDbMigrations.cs" />
-    <Compile Include="Demonstration\EfRawSqlQueries.cs" />
-    <Compile Include="Helpers\IPagedList.cs" />
-    <Compile Include="Helpers\ObjectQueryExtensions.cs" />
-    <Compile Include="Helpers\PagedList.cs" />
-    <Compile Include="Helpers\SqlScriptGenerator.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="IProductRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\AdventureWorks.Data\EfTest.AdventureWorks.Data.csproj">
-      <Project>{0401ffbc-cbcc-42a4-9c36-f3573bde14f7}</Project>
-      <Name>EfTest.AdventureWorks.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EfTest.AdventureWorks.Data.SqlServer\EfTest.AdventureWorks.Data.SqlServer.csproj">
-      <Project>{134dcbd5-908c-4f10-ad8f-3bc079a74ad1}</Project>
-      <Name>EfTest.AdventureWorks.Data.SqlServer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EfTest.AdventureWorks.Model\EfTest.AdventureWorks.Model.csproj">
       <Project>{6a9129a4-a568-4e68-a4f0-5fa7856288ff}</Project>
       <Name>EfTest.AdventureWorks.Model</Name>

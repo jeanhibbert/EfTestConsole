@@ -49,3 +49,7 @@ http://msftdbprodsamples.codeplex.com/
 - Modifying Transaction block around Select Queries using extension methods
 - Download the EF6 code base and run various unit tests
 	- Demonstrate basic select
+
+Advanced scenarios
+http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
+// Talk about serialisation performance in EF vs Dapper

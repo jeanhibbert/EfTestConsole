@@ -5,7 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTestConsole", "EfTestCons
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED30C4C1-56D7-4332-9467-A654CDEED818}"
 	ProjectSection(SolutionItems) = preProject
-		Ef6Presentation.pptx = Ef6Presentation.pptx
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
@@ -18,7 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{97D418
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTest.AdventureWorks.Model", "EfTest.AdventureWorks.Model\EfTest.AdventureWorks.Model.csproj", "{6A9129A4-A568-4E68-A4F0-5FA7856288FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Data", "AdventureWorks.Data\AdventureWorks.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTest.AdventureWorks.Data", "AdventureWorks.Data\EfTest.AdventureWorks.Data.csproj", "{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfTest.AdventureWorks.Data.SqlServer", "EfTest.AdventureWorks.Data.SqlServer\EfTest.AdventureWorks.Data.SqlServer.csproj", "{134DCBD5-908C-4F10-AD8F-3BC079A74AD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9785AFB0-7E6F-4D71-8101-5EC3865F139E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataTier", "DataTier", "{9F5B504D-4175-4B52-AADE-ACC7B9EBE2CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,8 +43,17 @@ Global
 		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134DCBD5-908C-4F10-AD8F-3BC079A74AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134DCBD5-908C-4F10-AD8F-3BC079A74AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134DCBD5-908C-4F10-AD8F-3BC079A74AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134DCBD5-908C-4F10-AD8F-3BC079A74AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A9129A4-A568-4E68-A4F0-5FA7856288FF} = {9F5B504D-4175-4B52-AADE-ACC7B9EBE2CC}
+		{0401FFBC-CBCC-42A4-9C36-F3573BDE14F7} = {9F5B504D-4175-4B52-AADE-ACC7B9EBE2CC}
+		{134DCBD5-908C-4F10-AD8F-3BC079A74AD1} = {9F5B504D-4175-4B52-AADE-ACC7B9EBE2CC}
 	EndGlobalSection
 EndGlobal
