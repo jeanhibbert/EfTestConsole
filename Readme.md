@@ -53,3 +53,6 @@ http://msftdbprodsamples.codeplex.com/
 Advanced scenarios
 http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 // Talk about serialisation performance in EF vs Dapper
+
+Getting and building the EF runtime
+https://entityframework.codeplex.com/wikipage?title=Getting%20and%20Building%20EF%20Runtime
