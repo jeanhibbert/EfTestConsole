@@ -1,0 +1,14 @@
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.csprojResolveAssemblyReference.cache
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EfTest.AdventureWorks.Data.SqlServer.dll.config
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EfTest.AdventureWorks.Data.SqlServer.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EfTest.AdventureWorks.Data.SqlServer.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EfTest.AdventureWorks.Data.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EfTest.AdventurWorks.Model.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EntityFramework.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EntityFramework.SqlServer.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EfTest.AdventureWorks.Data.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EfTest.AdventurWorks.Model.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EntityFramework.xml
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\bin\Debug\EntityFramework.SqlServer.xml
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.pdb
