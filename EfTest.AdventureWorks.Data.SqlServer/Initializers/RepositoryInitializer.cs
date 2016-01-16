@@ -1,4 +1,4 @@
-﻿namespace EfTest.AdventureWorks.Data.SqlServer
+﻿namespace EfTest.AdventureWorks.Data.SqlServer.Initializers
 {
     using System;
     using System.Data.Entity;

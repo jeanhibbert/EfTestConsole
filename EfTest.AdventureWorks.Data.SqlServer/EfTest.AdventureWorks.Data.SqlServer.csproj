@@ -54,11 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
-    <Compile Include="RepositoryInitializer.cs" />
+    <Compile Include="Initializers\RepositoryInitializer.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Initializers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\AdventureWorks.Data\EfTest.AdventureWorks.Data.csproj">
       <Project>{0401ffbc-cbcc-42a4-9c36-f3573bde14f7}</Project>

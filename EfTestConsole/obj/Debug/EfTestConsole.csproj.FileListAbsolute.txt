@@ -31,3 +31,6 @@ D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConso
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTestConsole\bin\Debug\EfTest.AdventureWorks.Data.SqlServer.dll
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTestConsole\bin\Debug\EfTest.AdventureWorks.Data.pdb
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTestConsole\bin\Debug\EfTest.AdventureWorks.Data.SqlServer.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTestConsole\bin\Debug\Dapper.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTestConsole\bin\Debug\Dapper.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTestConsole\bin\Debug\Dapper.xml

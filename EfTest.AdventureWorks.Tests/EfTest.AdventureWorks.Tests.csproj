@@ -57,8 +57,21 @@
       <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -79,6 +92,24 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdventureWorks.Data\EfTest.AdventureWorks.Data.csproj">
+      <Project>{0401ffbc-cbcc-42a4-9c36-f3573bde14f7}</Project>
+      <Name>EfTest.AdventureWorks.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EfTest.AdventureWorks.Data.SqlServer\EfTest.AdventureWorks.Data.SqlServer.csproj">
+      <Project>{134dcbd5-908c-4f10-ad8f-3bc079a74ad1}</Project>
+      <Name>EfTest.AdventureWorks.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EfTest.AdventureWorks.Model\EfTest.AdventureWorks.Model.csproj">
+      <Project>{6a9129a4-a568-4e68-a4f0-5fa7856288ff}</Project>
+      <Name>EfTest.AdventureWorks.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EfTestWebApi\EfTestWebApi.csproj">
+      <Project>{151f347b-d398-460c-9c91-5e34beb36733}</Project>
+      <Name>EfTestWebApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

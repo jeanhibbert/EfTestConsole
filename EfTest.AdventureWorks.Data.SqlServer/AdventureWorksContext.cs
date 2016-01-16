@@ -1,6 +1,7 @@
 namespace EfTest.AdventureWorks.Data.SqlServer
 {
     using System.Data.Entity;
+    using System.Diagnostics;
 
     using EfTest.AdventureWorks.Model.Models;
     using EfTest.AdventureWorks.Model.Models.Mapping;
@@ -16,6 +17,7 @@ namespace EfTest.AdventureWorks.Data.SqlServer
         public AdventureWorksContext()
             : base("Name=AdventureWorksContext")
         {
+            this.Database.Log = s => Debug.WriteLine(s);
         }
 
         /// <summary>
@@ -47,7 +49,7 @@ namespace EfTest.AdventureWorks.Data.SqlServer
         public DbSet<Document> Documents { get; set; }
         public DbSet<Illustration> Illustrations { get; set; }
         public DbSet<Location> Locations { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; } // Needed to make this virtual so that I could mock it out
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<ProductCostHistory> ProductCostHistories { get; set; }
         public DbSet<ProductDescription> ProductDescriptions { get; set; }

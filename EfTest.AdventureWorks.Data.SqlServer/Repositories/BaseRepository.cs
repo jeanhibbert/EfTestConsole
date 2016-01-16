@@ -1,13 +1,15 @@
 ﻿namespace EfTest.AdventureWorks.Data.SqlServer.Repositories
 {
     using System;
-    using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Linq;
-    using System.Linq.Expressions;
-    using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 
-    public class BaseRepository<T> : IDisposable where T: class
+    public class BaseRepository<T> : IBaseRepository<T>
+        where T: class
     {
         #region Constructors and Destructors
 
@@ -34,16 +36,24 @@
 
         protected IUnitOfWork UnitOfWork { get; set; }
 
+        public DbContextConfiguration DbContextConfiguration
+        {
+            get
+            {
+                return _context.Configuration;
+            }
+        }
+
         #endregion
 
         #region Methods
 
-        public ICollection<T> GetAll()
+        public List<T> GetAll()
         {
             return _context.Set<T>().ToList();
         }
 
-        public async Task<ICollection<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
         }
@@ -68,12 +78,12 @@
             return await _context.Set<T>().SingleOrDefaultAsync(match);
         }
 
-        public ICollection<T> FindAll(Expression<Func<T, bool>> match)
+        public List<T> FindAll(Expression<Func<T, bool>> match)
         {
             return _context.Set<T>().Where(match).ToList();
         }
 
-        public async Task<ICollection<T>> FindAllAsync(Expression<Func<T, bool>> match)
+        public async Task<List<T>> FindAllAsync(Expression<Func<T, bool>> match)
         {
             return await _context.Set<T>().Where(match).ToListAsync();
         }

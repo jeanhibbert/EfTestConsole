@@ -1,66 +1,107 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web.Http;
-using System.Web.Http.Description;
-using EfTest.AdventureWorks.Model.Models;
-using EfTest.AdventureWorks.Data.SqlServer;
-
-namespace EfTestWebApi.Controllers
+﻿namespace EfTestWebApi.Controllers
 {
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    using System.Linq;
+    using System.Net;
+    using System.Threading.Tasks;
+    using System.Web.Http;
+    using System.Web.Http.Description;
+
+    using EfTest.AdventureWorks.Data;
+    using EfTest.AdventureWorks.Model.Models;
+
     public class ProductController : ApiController
     {
-        private AdventureWorksContext db = new AdventureWorksContext();
+        #region Fields
+
+        private readonly IProductRepository _productRepository;
+
+        #endregion
+
+        #region Constructors and Destructors
+
+        public ProductController(IProductRepository productRepository)
+        {
+            this._productRepository = productRepository;
+            this._productRepository.DbContextConfiguration.ProxyCreationEnabled = false;
+        }
+
+        #endregion
+
+        #region Public Methods and Operators
+
+        [ResponseType(typeof(Product))]
+        public async Task<IHttpActionResult> DeleteProduct(int id)
+        {
+            Product product = await _productRepository.GetAsync(id);
+            if (product == null)
+            {
+                return this.NotFound();
+            }
+
+            await _productRepository.DeleteAsync(product);
+            return this.Ok(product);
+        }
 
         // GET api/Product
-        public IQueryable<Product> GetProducts()
-        {
-            return db.Products;
-        }
 
         // GET api/Product/5
         [ResponseType(typeof(Product))]
         public async Task<IHttpActionResult> GetProduct(int id)
         {
-            Product product = await db.Products.FindAsync(id);
+            Product product = await _productRepository.GetAsync(id);
             if (product == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            return Ok(product);
+            return this.Ok(product);
+        }
+
+        public async Task<List<Product>> GetProducts()
+        {
+            return await _productRepository.GetAllAsync();
         }
 
         // PUT api/Product/5
+
+        // POST api/Product
+        [ResponseType(typeof(Product))]
+        public async Task<IHttpActionResult> PostProduct(Product product)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.BadRequest(this.ModelState);
+            }
+
+            await _productRepository.AddAsync(product);
+
+            return CreatedAtRoute("DefaultApi", new { id = product.ProductID }, product);
+        }
+
         public async Task<IHttpActionResult> PutProduct(int id, Product product)
         {
-            if (!ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return this.BadRequest(this.ModelState);
             }
 
             if (id != product.ProductID)
             {
-                return BadRequest();
+                return this.BadRequest();
             }
-
-            db.Entry(product).State = EntityState.Modified;
 
             try
             {
-                await db.SaveChangesAsync();
+                await _productRepository.UpdateAsync(product, id);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(id))
+                if (!this.ProductExists(id))
                 {
-                    return NotFound();
+                    return this.NotFound();
                 }
                 else
                 {
@@ -68,52 +109,29 @@ namespace EfTestWebApi.Controllers
                 }
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            return this.StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST api/Product
-        [ResponseType(typeof(Product))]
-        public async Task<IHttpActionResult> PostProduct(Product product)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.Products.Add(product);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = product.ProductID }, product);
-        }
+        #endregion
 
         // DELETE api/Product/5
-        [ResponseType(typeof(Product))]
-        public async Task<IHttpActionResult> DeleteProduct(int id)
-        {
-            Product product = await db.Products.FindAsync(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
 
-            db.Products.Remove(product);
-            await db.SaveChangesAsync();
-
-            return Ok(product);
-        }
+        #region Methods
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                _productRepository.Dispose();
             }
             base.Dispose(disposing);
         }
 
         private bool ProductExists(int id)
         {
-            return db.Products.Count(e => e.ProductID == id) > 0;
+            return _productRepository.GetDbSet().Count(e => e.ProductID == id) > 0;
         }
+
+        #endregion
     }
 }

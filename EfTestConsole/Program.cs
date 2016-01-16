@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using EfTestConsole.Helpers;
-using EfTestConsole.Demonstration;
-
-namespace EfTestConsole
+﻿namespace EfTestConsole
 {
-    class Program
+    using EfTestConsole.Demonstration;
+    using HibernatingRhinos.Profiler.Appender.EntityFramework;
+
+    internal class Program
     {
-        static void Main(string[] args)
+        #region Methods
+
+        private static void Main(string[] args)
         {
-
-            //SqlScriptGenerator.GenerateScript();
-
-            HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
+            EntityFrameworkProfiler.Initialize();
 
             // ------------------------ Lazy vs Deep load EF queries ----------------------------------//
             //EfQueryGeneration.ShowSelect();
-            EfCaching.DemonstrateCaching();
-           // EfDbMigrations.GenerateSqlUsingDbMigrator();
+            //EfCaching.DemonstrateCaching();
+            // EfDbMigrations.GenerateSqlUsingDbMigrator();
+
+            //EfBenchmarks.RunBenchmarks();
+
+            EfProductRepositoryTest.TestProductRepository();
+
         }
+
+        #endregion
     }
 }
