@@ -96,7 +96,3 @@ http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mv
 
 
 https://github.com/rowanmiller
-
-
-Check Demo's out on
-D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\ENTITY FRAMEWORK\EFTalk\Temp
