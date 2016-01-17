@@ -53,6 +53,7 @@
       <HintPath>..\packages\EntityFramework.Testing.Moq.1.0.0-apha2\lib\net45\EntityFramework.Testing.Moq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Moq, Version=4.2.1402.2112, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
       <Private>True</Private>
@@ -86,7 +87,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ProductServiceTestFixture.cs" />
+    <Compile Include="Dapper\ContactReporitoryTestFixture.cs" />
+    <Compile Include="EntityFramework\ProductServiceTestFixture.cs" />
+    <Compile Include="Massive\ContactRepositoryTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +114,7 @@
       <Name>EfTestWebApi</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

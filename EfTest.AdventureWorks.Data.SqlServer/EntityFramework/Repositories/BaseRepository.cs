@@ -1,12 +1,14 @@
-﻿namespace EfTest.AdventureWorks.Data.SqlServer.Repositories
+﻿namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories
 {
     using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Threading.Tasks;
+
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
 
     public class BaseRepository<T> : IBaseRepository<T>
         where T: class
@@ -40,7 +42,7 @@ using System.Threading.Tasks;
         {
             get
             {
-                return _context.Configuration;
+                return this._context.Configuration;
             }
         }
 
@@ -50,55 +52,55 @@ using System.Threading.Tasks;
 
         public List<T> GetAll()
         {
-            return _context.Set<T>().ToList();
+            return this._context.Set<T>().ToList();
         }
 
         public async Task<List<T>> GetAllAsync()
         {
-            return await _context.Set<T>().ToListAsync();
+            return await this._context.Set<T>().ToListAsync();
         }
 
         public T Get(int id)
         {
-            return _context.Set<T>().Find(id);
+            return this._context.Set<T>().Find(id);
         }
 
         public async Task<T> GetAsync(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
+            return await this._context.Set<T>().FindAsync(id);
         }
 
         public T Find(Expression<Func<T, bool>> match)
         {
-            return _context.Set<T>().SingleOrDefault(match);
+            return this._context.Set<T>().SingleOrDefault(match);
         }
 
         public async Task<T> FindAsync(Expression<Func<T, bool>> match)
         {
-            return await _context.Set<T>().SingleOrDefaultAsync(match);
+            return await this._context.Set<T>().SingleOrDefaultAsync(match);
         }
 
         public List<T> FindAll(Expression<Func<T, bool>> match)
         {
-            return _context.Set<T>().Where(match).ToList();
+            return this._context.Set<T>().Where(match).ToList();
         }
 
         public async Task<List<T>> FindAllAsync(Expression<Func<T, bool>> match)
         {
-            return await _context.Set<T>().Where(match).ToListAsync();
+            return await this._context.Set<T>().Where(match).ToListAsync();
         }
 
         public T Add(T t)
         {
-            _context.Set<T>().Add(t);
-            _context.SaveChanges();
+            this._context.Set<T>().Add(t);
+            this._context.SaveChanges();
             return t;
         }
 
         public async Task<T> AddAsync(T t)
         {
-            _context.Set<T>().Add(t);
-            await _context.SaveChangesAsync();
+            this._context.Set<T>().Add(t);
+            await this._context.SaveChangesAsync();
             return t;
         }
 
@@ -107,11 +109,11 @@ using System.Threading.Tasks;
             if (updated == null)
                 return null;
 
-            T existing = _context.Set<T>().Find(key);
+            T existing = this._context.Set<T>().Find(key);
             if (existing != null)
             {
-                _context.Entry(existing).CurrentValues.SetValues(updated);
-                _context.SaveChanges();
+                this._context.Entry(existing).CurrentValues.SetValues(updated);
+                this._context.SaveChanges();
             }
             return existing;
         }
@@ -121,35 +123,35 @@ using System.Threading.Tasks;
             if (updated == null)
                 return null;
 
-            T existing = await _context.Set<T>().FindAsync(key);
+            T existing = await this._context.Set<T>().FindAsync(key);
             if (existing != null)
             {
-                _context.Entry(existing).CurrentValues.SetValues(updated);
-                await _context.SaveChangesAsync();
+                this._context.Entry(existing).CurrentValues.SetValues(updated);
+                await this._context.SaveChangesAsync();
             }
             return existing;
         }
 
         public void Delete(T t)
         {
-            _context.Set<T>().Remove(t);
-            _context.SaveChanges();
+            this._context.Set<T>().Remove(t);
+            this._context.SaveChanges();
         }
 
         public async Task<int> DeleteAsync(T t)
         {
-            _context.Set<T>().Remove(t);
-            return await _context.SaveChangesAsync();
+            this._context.Set<T>().Remove(t);
+            return await this._context.SaveChangesAsync();
         }
 
         public int Count()
         {
-            return _context.Set<T>().Count();
+            return this._context.Set<T>().Count();
         }
 
         public async Task<int> CountAsync()
         {
-            return await _context.Set<T>().CountAsync();
+            return await this._context.Set<T>().CountAsync();
         }
 
         public DbSet<T> GetDbSet()
@@ -161,7 +163,7 @@ using System.Threading.Tasks;
 
         public void Dispose()
         {
-            _context.Dispose();
+            this._context.Dispose();
         }
     }
 }

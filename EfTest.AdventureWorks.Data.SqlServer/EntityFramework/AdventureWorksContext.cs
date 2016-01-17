@@ -1,11 +1,11 @@
-namespace EfTest.AdventureWorks.Data.SqlServer
+namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework
 {
     using System.Data.Entity;
     using System.Diagnostics;
 
     using EfTest.AdventureWorks.Model.Models;
     using EfTest.AdventureWorks.Model.Models.Mapping;
-    using AdventureWorks.Data;
+    using EfTest.AdventureWorks.Data;
 
     public partial class AdventureWorksContext : DbContext, IUnitOfWork
     {

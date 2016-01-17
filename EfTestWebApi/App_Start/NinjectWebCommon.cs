@@ -6,13 +6,15 @@ namespace EfTestWebApi.App_Start
     using System;
     using System.Web;
 
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
+
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
     using Ninject.Web.Common;
     using EfTest.AdventureWorks.Data;
     using EfTest.AdventureWorks.Data.SqlServer;
-    using EfTest.AdventureWorks.Data.SqlServer.Repositories;
 
     public static class NinjectWebCommon 
     {

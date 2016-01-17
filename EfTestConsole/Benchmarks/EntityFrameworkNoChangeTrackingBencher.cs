@@ -5,6 +5,7 @@
     using System.Linq;
 
     using EfTest.AdventureWorks.Data.SqlServer;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
     using EfTest.AdventureWorks.Model.Models;
 
     /// <summary>

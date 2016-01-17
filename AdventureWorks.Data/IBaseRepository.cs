@@ -2,8 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
     using System.Linq.Expressions;
     using System.Threading.Tasks;
 
@@ -31,8 +29,5 @@
 
         int Count();
         Task<int> CountAsync();
-
-        DbSet<T> GetDbSet();
-        DbContextConfiguration DbContextConfiguration { get; }
     }
 }

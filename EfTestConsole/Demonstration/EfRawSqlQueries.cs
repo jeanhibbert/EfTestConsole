@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace EfTestConsole.Demonstration
 {
     using EfTest.AdventureWorks.Data.SqlServer;
-    using EfTest.AdventureWorks.Data.SqlServer.Repositories;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
 
     public static class EfRawSqlQueries
     {

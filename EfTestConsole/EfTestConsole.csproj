@@ -68,7 +68,6 @@
     <Compile Include="Benchmarks\EntityFrameworkNoChangeTrackingBencher.cs" />
     <Compile Include="Benchmarks\EntityFrameworkNormalBencher.cs" />
     <Compile Include="Benchmarks\IBencher.cs" />
-    <Compile Include="Benchmarks\Massive.cs" />
     <Compile Include="Benchmarks\MassiveBencher.cs" />
     <Compile Include="Benchmarks\RawDbDataReaderBencher.cs" />
     <Compile Include="Demonstration\EfBenchmarks.cs" />

@@ -36,3 +36,6 @@ D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConso
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Tests\bin\Debug\Ninject.Web.Common.xml
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Tests\bin\Debug\Ninject.xml
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Tests\bin\Debug\Ninject.Web.xml
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Tests\bin\Debug\Dapper.dll
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Tests\bin\Debug\Dapper.pdb
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Tests\bin\Debug\Dapper.xml

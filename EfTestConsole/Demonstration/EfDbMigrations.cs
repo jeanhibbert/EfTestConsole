@@ -6,6 +6,7 @@
     using System.Data.Entity.Migrations.Infrastructure;
 
     using EfTest.AdventureWorks.Data.SqlServer;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
 
     internal class EfDbMigrations
     {

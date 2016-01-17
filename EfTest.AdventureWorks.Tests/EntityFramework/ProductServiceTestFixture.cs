@@ -6,7 +6,7 @@
     using System.Threading.Tasks;
 
     using EfTest.AdventureWorks.Data.SqlServer;
-    using EfTest.AdventureWorks.Data.SqlServer.Repositories;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
     using EfTest.AdventureWorks.Model.Models;
 
     using EfTestWebApi.Controllers;

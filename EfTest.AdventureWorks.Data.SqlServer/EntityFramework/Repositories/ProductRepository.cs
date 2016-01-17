@@ -1,4 +1,4 @@
-﻿namespace EfTest.AdventureWorks.Data.SqlServer.Repositories
+﻿namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories
 {
     using System.Collections.Generic;
 

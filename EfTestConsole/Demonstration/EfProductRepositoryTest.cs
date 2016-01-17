@@ -1,8 +1,8 @@
-﻿using EfTest.AdventureWorks.Data.SqlServer.Repositories;
-
-namespace EfTestConsole.Demonstration
+﻿namespace EfTestConsole.Demonstration
 {
     using EfTest.AdventureWorks.Data.SqlServer;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
 
     public static class EfProductRepositoryTest
     {
