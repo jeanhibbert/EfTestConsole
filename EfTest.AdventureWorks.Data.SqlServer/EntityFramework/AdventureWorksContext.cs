@@ -1,8 +1,11 @@
 namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework
 {
     using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
     using System.Diagnostics;
+    using System.Linq;
 
+    using EfTest.AdventurWorks.Model.EfHelpers;
     using EfTest.AdventureWorks.Model.Models;
     using EfTest.AdventureWorks.Model.Models.Mapping;
     using EfTest.AdventureWorks.Data;
@@ -118,6 +121,12 @@ namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            var conv = new AttributeToTableAnnotationConvention<SoftDeleteAttribute, string>(
+                "SoftDeleteColumnName",
+                (type, attributes) => attributes.Single().ColumnName);
+
+            modelBuilder.Conventions.Add(conv);
+
             modelBuilder.Configurations.Add(new AWBuildVersionMap());
             modelBuilder.Configurations.Add(new DatabaseLogMap());
             modelBuilder.Configurations.Add(new ErrorLogMap());

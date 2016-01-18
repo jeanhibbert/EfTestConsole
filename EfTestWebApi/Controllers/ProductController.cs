@@ -24,8 +24,9 @@
 
         public ProductController(IProductRepository productRepository)
         {
+            //db.Configuration.ProxyCreationEnabled = false;
+            //db.Configuration.LazyLoadingEnabled = false;
             this._productRepository = productRepository;
-            this._productRepository.DbContextConfiguration.ProxyCreationEnabled = false;
         }
 
         #endregion
@@ -129,7 +130,7 @@
 
         private bool ProductExists(int id)
         {
-            return _productRepository.GetDbSet().Count(e => e.ProductID == id) > 0;
+            return _productRepository.FindAll(e => e.ProductID == id).Count > 0;
         }
 
         #endregion

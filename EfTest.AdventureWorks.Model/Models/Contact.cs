@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace EfTest.AdventureWorks.Model.Models
 {
+    using EfTest.AdventurWorks.Model.EfHelpers;
+
+    [SoftDelete("IsDeleted")]
     public partial class Contact
     {
         public Contact()
@@ -14,6 +17,8 @@ namespace EfTest.AdventureWorks.Model.Models
             this.StoreContacts = new List<StoreContact>();
             this.VendorContacts = new List<VendorContact>();
         }
+
+        public bool IsDeleted { get; set; }
 
         public int ContactID { get; set; }
         public bool NameStyle { get; set; }

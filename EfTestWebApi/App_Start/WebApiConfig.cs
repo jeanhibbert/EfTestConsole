@@ -20,6 +20,14 @@ namespace EfTestWebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //var json = config.Formatters.JsonFormatter;
+            //json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None; 
+            //// returns 500 error if "None", returns unwanted data and format if "Objects"
+            //config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+            //GlobalConfiguration.Configuration.Formatters.Clear();
+            //GlobalConfiguration.Configuration.Formatters.Add(json);
         }
     }
 }

@@ -57,16 +57,33 @@
   <ItemGroup>
     <Compile Include="Dapper\Repositories\ContactRepository.cs" />
     <Compile Include="EntityFramework\AdventureWorksContext.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkConfiguration.cs" />
     <Compile Include="EntityFramework\Repositories\ContactRepository.cs" />
     <Compile Include="Massive\Repositories\ContactRepository.cs" />
     <Compile Include="Massive\Contacts.cs" />
     <Compile Include="Massive\Massive.cs" />
+    <Compile Include="Migrations\201601182249321_Initial.cs" />
+    <Compile Include="Migrations\201601182249321_Initial.Designer.cs">
+      <DependentUpon>201601182249321_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\201601182300070_ContactIsDeleted.cs" />
+    <Compile Include="Migrations\201601182300070_ContactIsDeleted.Designer.cs">
+      <DependentUpon>201601182300070_ContactIsDeleted.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EntityFramework\Repositories\BaseRepository.cs" />
     <Compile Include="EntityFramework\Repositories\ProductRepository.cs" />
     <Compile Include="EntityFramework\Initializers\RepositoryInitializer.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601182249321_Initial.resx">
+      <DependentUpon>201601182249321_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601182300070_ContactIsDeleted.resx">
+      <DependentUpon>201601182300070_ContactIsDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventureWorks.Data\EfTest.AdventureWorks.Data.csproj">
       <Project>{0401ffbc-cbcc-42a4-9c36-f3573bde14f7}</Project>

@@ -50,6 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EfHelpers\CreateFullTextIndexOperation.cs" />
+    <Compile Include="EfHelpers\DbContextExtensions.cs" />
+    <Compile Include="EfHelpers\DbMigrationExtensions.cs" />
+    <Compile Include="EfHelpers\MyMigrationSqlGenerator.cs" />
+    <Compile Include="EfHelpers\SoftDeleteAttribute.cs" />
+    <Compile Include="EfHelpers\SoftDeleteInterceptor.cs" />
+    <Compile Include="EfHelpers\SoftDeleteQueryVisitor.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AddressType.cs" />
     <Compile Include="Models\AWBuildVersion.cs" />
