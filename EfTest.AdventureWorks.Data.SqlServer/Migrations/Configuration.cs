@@ -1,25 +1,27 @@
 namespace EfTest.AdventureWorks.Data.SqlServer.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Data.Entity.SqlServer;
-    using System.Linq;
 
     using EfTest.AdventurWorks.Model.EfHelpers;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EfTest.AdventureWorks.Data.SqlServer.EntityFramework.AdventureWorksContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<AdventureWorksContext>
     {
+        #region Constructors and Destructors
+
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            this.AutomaticMigrationsEnabled = false;
 
-            SetSqlGenerator(
-                SqlProviderServices.ProviderInvariantName,
-                new MyMigrationSqlGenerator());
+            this.SetSqlGenerator(SqlProviderServices.ProviderInvariantName, new MyMigrationSqlGenerator());
         }
 
-        protected override void Seed(EfTest.AdventureWorks.Data.SqlServer.EntityFramework.AdventureWorksContext context)
+        #endregion
+
+        #region Methods
+
+        protected override void Seed(AdventureWorksContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -34,5 +36,7 @@ namespace EfTest.AdventureWorks.Data.SqlServer.Migrations
             //    );
             //
         }
+
+        #endregion
     }
 }

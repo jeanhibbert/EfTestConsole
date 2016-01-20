@@ -8,7 +8,7 @@
     {
         public EntityFrameworkConfiguration()
         {
-            AddInterceptor(new SoftDeleteInterceptor());
+            //AddInterceptor(new SoftDeleteInterceptor());
         }
     }
 }

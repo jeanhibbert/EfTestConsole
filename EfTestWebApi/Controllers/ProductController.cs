@@ -11,12 +11,14 @@
 
     using EfTest.AdventureWorks.Data;
     using EfTest.AdventureWorks.Model.Models;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
 
     public class ProductController : ApiController
     {
         #region Fields
 
         private readonly IProductRepository _productRepository;
+        private readonly ProductRepository _repository;
 
         #endregion
 
@@ -24,9 +26,9 @@
 
         public ProductController(IProductRepository productRepository)
         {
-            //db.Configuration.ProxyCreationEnabled = false;
-            //db.Configuration.LazyLoadingEnabled = false;
-            this._productRepository = productRepository;
+            _productRepository = productRepository;
+            _repository = _productRepository as ProductRepository;
+            _repository.DbContextConfiguration.ProxyCreationEnabled = false;
         }
 
         #endregion
@@ -46,7 +48,15 @@
             return this.Ok(product);
         }
 
-        // GET api/Product
+        // GET api/Product/Search?=bottom
+        public async Task<List<Product>> Search(string term)
+        {
+            const string sql = "SELECT * FROM Production.Product WHERE CONTAINS((Name), @p0)";
+
+            var products = await _repository.GetDbSet().SqlQuery(sql, term).ToListAsync();
+            
+            return products;
+        }
 
         // GET api/Product/5
         [ResponseType(typeof(Product))]

@@ -18,8 +18,6 @@
 
         private IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["contactsDB"].ConnectionString);
 
-        #region Public Methods and Operators
-
         public Contact Add(Contact contact)
         {
             var sql =
@@ -144,8 +142,6 @@
             throw new NotImplementedException();
         }
 
-
-
         public Task<List<Contact>> GetAllAsync()
         {
             throw new NotImplementedException();
@@ -156,13 +152,10 @@
             throw new NotImplementedException();
         }
 
-
         public Task<Contact> UpdateAsync(Contact updated, int key)
         {
             throw new NotImplementedException();
         }
-
-        #endregion
 
         #endregion
 

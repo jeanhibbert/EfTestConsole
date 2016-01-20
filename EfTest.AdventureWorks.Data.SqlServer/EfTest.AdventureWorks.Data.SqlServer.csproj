@@ -66,6 +66,14 @@
     <Compile Include="Migrations\201601182249321_Initial.Designer.cs">
       <DependentUpon>201601182249321_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601202055424_FullText.cs" />
+    <Compile Include="Migrations\201601202055424_FullText.Designer.cs">
+      <DependentUpon>201601202055424_FullText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601202209233_FullText_ProductName.cs" />
+    <Compile Include="Migrations\201601202209233_FullText_ProductName.Designer.cs">
+      <DependentUpon>201601202209233_FullText_ProductName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\201601182300070_ContactIsDeleted.cs" />
     <Compile Include="Migrations\201601182300070_ContactIsDeleted.Designer.cs">
@@ -82,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601182300070_ContactIsDeleted.resx">
       <DependentUpon>201601182300070_ContactIsDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601202055424_FullText.resx">
+      <DependentUpon>201601202055424_FullText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601202209233_FullText_ProductName.resx">
+      <DependentUpon>201601202209233_FullText_ProductName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

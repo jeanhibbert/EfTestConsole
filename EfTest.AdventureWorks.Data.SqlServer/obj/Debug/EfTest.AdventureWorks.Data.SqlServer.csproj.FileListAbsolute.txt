@@ -18,3 +18,5 @@ D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConso
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.Migrations.Initial.resources
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.csproj.GenerateResource.Cache
 D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.Migrations.ContactIsDeleted.resources
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.Migrations.FullText.resources
+D:\CLOUD_STORAGE\Dropbox\JEAN\IT_DEVCODE\MS.NET\Github\EFTestConsole\EfTestConsole\EfTest.AdventureWorks.Data.SqlServer\obj\Debug\EfTest.AdventureWorks.Data.SqlServer.Migrations.FullText_ProductName.resources
