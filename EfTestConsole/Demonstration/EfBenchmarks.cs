@@ -35,7 +35,7 @@
         private static readonly List<IBencher> RegisteredBenchers = new List<IBencher>();
 
         private static string ConnectionString =
-            ConfigurationManager.ConnectionStrings["AdventureWorksContext"].ConnectionString;
+            ConfigurationManager.ConnectionStrings["AdventureWorks"].ConnectionString;
 
         private static List<int> KeysForIndividualFetches = new List<int>();
 
@@ -182,7 +182,7 @@
         private static void InitConnectionString()
         {
             ConnectionStringSettings connectionStringFromConfig =
-                ConfigurationManager.ConnectionStrings["AdventureWorksContext"];
+                ConfigurationManager.ConnectionStrings["AdventureWorks"];
             if (connectionStringFromConfig != null)
             {
                 ConnectionString = string.IsNullOrEmpty(connectionStringFromConfig.ConnectionString)

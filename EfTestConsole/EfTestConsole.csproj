@@ -70,6 +70,7 @@
     <Compile Include="Benchmarks\IBencher.cs" />
     <Compile Include="Benchmarks\MassiveBencher.cs" />
     <Compile Include="Benchmarks\RawDbDataReaderBencher.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Demonstration\EfBenchmarks.cs" />
     <Compile Include="Demonstration\EfCaching.cs" />
     <Compile Include="Demonstration\EfProductRepositoryTest.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Demonstration\EfDbMigrations.cs" />
     <Compile Include="Demonstration\EfRawSqlQueries.cs" />
     <Compile Include="Helpers\IPagedList.cs" />
+    <Compile Include="Helpers\MeasureUtil.cs" />
     <Compile Include="Helpers\ObjectQueryExtensions.cs" />
     <Compile Include="Helpers\PagedList.cs" />
     <Compile Include="Helpers\SqlScriptGenerator.cs" />

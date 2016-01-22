@@ -14,11 +14,13 @@
             // ------------------------ Lazy vs Deep load EF queries ----------------------------------//
             //EfQueryGeneration.ShowSelect();
             //EfCaching.DemonstrateCaching();
-            // EfDbMigrations.GenerateSqlUsingDbMigrator();
+            //EfDbMigrations.GenerateSqlUsingDbMigrator();
+
+            EfRawSqlQueries.EfVsDapperTest();
 
             //EfBenchmarks.RunBenchmarks();
 
-            EfProductRepositoryTest.TestProductRepository();
+            //EfProductRepositoryTest.TestProductRepository();
 
         }
 

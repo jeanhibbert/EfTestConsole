@@ -6,7 +6,7 @@ namespace EfTest.AdventureWorks.Data.SqlServer.Migrations
     using EfTest.AdventurWorks.Model.EfHelpers;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AdventureWorksContext>
+    public sealed class Configuration : DbMigrationsConfiguration<AdventureWorksContext>
     {
         #region Constructors and Destructors
 

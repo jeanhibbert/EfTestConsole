@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 
 namespace EfTestConsole.Demonstration
 {
+    using System.Data.Entity.Core.Objects;
+
     using EfTest.AdventureWorks.Data.SqlServer;
+    using EfTest.AdventureWorks.Data.SqlServer.Dapper.Repositories;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
+
+    using EfTestConsole.Helpers;
+    using System.Data.Entity.Infrastructure;
 
     public static class EfRawSqlQueries
     {
         public static async Task<Product> FindProductAsync()
         {
-
-            // Commenting out original code to show how to use a raw SQL query.
-            
             // Create and execute raw SQL query.
             using (var repository = new ProductRepository(new AdventureWorksContext()))
             {
@@ -28,8 +31,46 @@ namespace EfTestConsole.Demonstration
 
                 return product;
             }
-            // Talk about serialisation performance in EF vs Dapper
-            
         }
+
+        public static void EfVsDapperTest()
+        {
+            var sql = "Select Top 10000 * from Person.Contact";
+
+            while (true)
+            {
+                using (new MeasureUtil("Entity Framework Serialisation - Database.SqlQuery"))
+                using (var context = new AdventureWorksContext())
+                {
+                    DbRawSqlQuery<Contact> contacts = context.Database.SqlQuery<Contact>(sql);
+                    List<Contact> contactsList = contacts.ToList();
+                    Console.WriteLine(contactsList.Count());
+                    Console.WriteLine(contactsList.First().ToString());
+                }
+
+                using (new MeasureUtil("Entity Framework Serialisation - Execute Store Query"))
+                using (var context = new AdventureWorksContext())
+                {
+                    ObjectResult<Contact> contacts = ((IObjectContextAdapter)context).ObjectContext.ExecuteStoreQuery<Contact>(sql);
+                    List<Contact> contactsList = contacts.ToList();
+                    Console.WriteLine(contactsList.Count());
+                    Console.WriteLine(contactsList.First().ToString());
+                }
+
+                using (new MeasureUtil("Dapper Serialisation"))
+                using (
+                    var contactRepository =
+                        new EfTest.AdventureWorks.Data.SqlServer.Dapper.Repositories.ContactRepository())
+                {
+                    IEnumerable<Contact> contacts = contactRepository.Execute(sql);
+                    List<Contact> contactsList = contacts.ToList();
+                    Console.WriteLine(contactsList.Count());
+                    Console.WriteLine(contactsList.First().ToString());
+                }
+                Console.ReadKey();
+                //TODO: Test without proxy generation
+            }
+        }
+
     }
 }

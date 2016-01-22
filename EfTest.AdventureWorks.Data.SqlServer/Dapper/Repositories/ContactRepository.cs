@@ -15,8 +15,7 @@
 
     public class ContactRepository : IContactRepository
     {
-
-        private IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["contactsDB"].ConnectionString);
+        private IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["AdventureWorks"].ConnectionString);
 
         public Contact Add(Contact contact)
         {
@@ -41,6 +40,11 @@
         public List<Contact> GetAll()
         {
             return this.db.Query<Contact>("SELECT * FROM Contacts").ToList();
+        }
+
+        public IEnumerable<Contact> Execute(string sql)
+        {
+            return this.db.Query<Contact>(sql);
         }
 
         public Contact Update(Contact contact, int key)

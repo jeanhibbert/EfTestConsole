@@ -15,7 +15,7 @@ namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework
         }
 
         public AdventureWorksContext()
-            : base("Name=AdventureWorksContext")
+            : base("Name=AdventureWorks")
         {
             this.Database.Log = s => Debug.WriteLine(s);
         }

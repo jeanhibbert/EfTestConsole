@@ -62,7 +62,7 @@
 
 	public class MassiveSalesOrderHeaders : DynamicModel
 	{
-		public MassiveSalesOrderHeaders():base("AdventureWorksContext", "Sales.SalesOrderHeader", "SalesOrderID")
+		public MassiveSalesOrderHeaders():base("AdventureWorks", "Sales.SalesOrderHeader", "SalesOrderID")
 		{
 		}
 	}
