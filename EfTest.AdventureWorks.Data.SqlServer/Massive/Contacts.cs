@@ -9,7 +9,7 @@
         #region Constructors and Destructors
 
         public Contacts()
-            : base("contactsDB", "Contacts", "Id")
+            : base("AdventureWorks", "Person.Contact", "ContactID")
         {
         }
 

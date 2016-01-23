@@ -20,7 +20,7 @@
         public Contact Add(Contact contact)
         {
             var sql =
-                "INSERT INTO Contacts (FirstName, LastName, EmailAddress, Title) VALUES(@FirstName, @LastName, @EmailAddress, @Title); " +
+                "INSERT INTO Person.Contact (FirstName, LastName) VALUES(@FirstName, @LastName); " +
                 "SELECT CAST(SCOPE_IDENTITY() as int)";
             var id = this.db.Query<int>(sql, contact).Single();
             contact.ContactID = id;
@@ -29,17 +29,17 @@
 
         public void Delete(Contact contact)
         {
-            this.db.Execute("DELETE FROM Contacts WHERE Id = @Id", new { contact.ContactID });
+            this.db.Execute("DELETE FROM Person.Contact WHERE Id = @Id", new { contact.ContactID });
         }
 
         public Contact Get(int id)
         {
-            return this.db.Query<Contact>("SELECT * FROM Contacts WHERE Id = @Id", new { id }).SingleOrDefault();
+            return this.db.Query<Contact>("SELECT * FROM Person.Contact WHERE Id = @Id", new { id }).SingleOrDefault();
         }
 
         public List<Contact> GetAll()
         {
-            return this.db.Query<Contact>("SELECT * FROM Contacts").ToList();
+            return this.db.Query<Contact>("SELECT * FROM Person.Contact").ToList();
         }
 
         public IEnumerable<Contact> Execute(string sql)
@@ -50,13 +50,13 @@
         public Contact Update(Contact contact, int key)
         {
             var sql =
-                "UPDATE Contacts " +
+                "UPDATE Person.Contact " +
                 "SET FirstName = @FirstName, " +
                 "    LastName  = @LastName, " +
                 "    Email     = @Email, " +
                 "    Company   = @Company, " +
                 "    Title     = @Title " +
-                "WHERE Id = @Id";
+                "WHERE ContactID = @Id";
             this.db.Execute(sql, contact);
             return contact;
         }
@@ -66,19 +66,19 @@
         {
             this.EnsureOpenConnection();
             var sql =
-                "INSERT INTO Contacts (FirstName, LastName, Email, Company, Title) VALUES(@FirstName, @LastName, @Email, @Company, @Title); " +
+                "INSERT INTO Person.Contact (FirstName, LastName) VALUES(@FirstName, @LastName); " +
                 "SELECT CAST(SCOPE_IDENTITY() as int)";
             return this.db.Execute(sql, contacts);
         }
 
         public List<Contact> GetContactsById(params int[] ids)
         {
-            return this.db.Query<Contact>("SELECT * FROM Contacts WHERE ID IN @Ids", new { Ids = ids }).ToList();
+            return this.db.Query<Contact>("SELECT * FROM Person.Contact WHERE ContactID IN @Ids", new { Ids = ids }).ToList();
         }
 
         public List<dynamic> GetDynamicById(params int[] ids)
         {
-            return this.db.Query("SELECT * FROM Contacts WHERE ID IN @Ids", new { Ids = ids }).ToList();
+            return this.db.Query("SELECT * FROM Person.Contact WHERE ContactID IN @Ids", new { Ids = ids }).ToList();
         }
 
         #region Private Methods

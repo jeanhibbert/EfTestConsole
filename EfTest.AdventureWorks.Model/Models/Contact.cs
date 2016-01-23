@@ -5,7 +5,7 @@ namespace EfTest.AdventureWorks.Model.Models
 {
     using EfTest.AdventurWorks.Model.EfHelpers;
 
-    [SoftDelete("IsDeleted")]
+    //[SoftDelete("IsDeleted")]
     public partial class Contact
     {
         public Contact()

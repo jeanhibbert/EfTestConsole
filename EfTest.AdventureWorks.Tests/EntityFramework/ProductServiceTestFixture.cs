@@ -1,21 +1,18 @@
-﻿namespace EfTest.AdventureWorks.Tests
+﻿namespace EfTest.AdventureWorks.Tests.EntityFramework
 {
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
     using System.Threading.Tasks;
 
-    using EfTest.AdventureWorks.Data.SqlServer;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
     using EfTest.AdventureWorks.Model.Models;
-
-    using EfTestWebApi.Controllers;
-
-    using EntityFramework.Testing.Moq;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Moq;
+
+    using global::EntityFramework.Testing.Moq;
 
     [TestClass]
     public class ProductServiceTestFixture
@@ -41,13 +38,10 @@
             context.Setup(c => c.Products).Returns(set.Object);
 
             //Create a Controller and invoke the Index action
-            //var controller = new ProductController(new ProductRepository(context.Object));
-            //List<Product> result = await controller.GetProducts();
             List<Product> result = await context.Object.Products.ToListAsync();
 
-
             //Check the results
-            var products = result;
+            List<Product> products = result;
             Assert.AreEqual(4, products.Count());
             Assert.AreEqual(1, products[0].ProductID);
             Assert.AreEqual(4, products[1].ProductID);

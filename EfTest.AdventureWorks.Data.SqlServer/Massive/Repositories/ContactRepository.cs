@@ -25,10 +25,10 @@
 
         public List<dynamic> GetAll()
         {
-            //var table = new DynamicModel("contactsDB", "Contacts", "Id");
+            //var table = new DynamicModel("AdventureWorks", "Person.Contact", "ContactID");
             var table = new Contacts();
             return table.All().ToList();
-            //return table.Query("SELECT * FROM Contacts").ToList();
+            //return table.Query("SELECT * FROM Person.Contact").ToList();
 
             //dynamic table = new Contacts();
             //return (table.Find() as IEnumerable<dynamic>).ToList();
@@ -55,7 +55,7 @@
         public int GetMaxId()
         {
             dynamic table = new Contacts();
-            return table.Max(columns: "Id");
+            return table.Max(columns: "ContactID");
         }
 
         public IEnumerable<dynamic> GetSchema()
@@ -67,7 +67,7 @@
         public int GetSum()
         {
             dynamic table = new Contacts();
-            return table.Sum(columns: "Id");
+            return table.Sum(columns: "ContactID");
         }
 
         public void Remove(int id)
