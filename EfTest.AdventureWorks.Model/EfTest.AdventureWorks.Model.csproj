@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +54,7 @@
     <Compile Include="EfHelpers\CreateFullTextIndexOperation.cs" />
     <Compile Include="EfHelpers\DbContextExtensions.cs" />
     <Compile Include="EfHelpers\DbMigrationExtensions.cs" />
+    <Compile Include="EfHelpers\EfExtensions.cs" />
     <Compile Include="EfHelpers\MyMigrationSqlGenerator.cs" />
     <Compile Include="EfHelpers\SoftDeleteAttribute.cs" />
     <Compile Include="EfHelpers\SoftDeleteInterceptor.cs" />

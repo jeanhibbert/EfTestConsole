@@ -1,9 +1,10 @@
 ﻿namespace EfTest.AdventureWorks.Data.SqlServer.Massive.Repositories
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    public class ContactRepository
+    public class ContactRepository : IDisposable
     {
         #region Public Methods and Operators
 
@@ -32,6 +33,12 @@
 
             //dynamic table = new Contacts();
             //return (table.Find() as IEnumerable<dynamic>).ToList();
+        }
+
+        public IEnumerable<dynamic> Query(string sql)
+        {
+            var table = new Contacts();
+            return table.Query(sql);
         }
 
         public dynamic GetAllPaged(int currentPage, int pageSize)
@@ -84,5 +91,8 @@
         }
 
         #endregion
+
+        public void Dispose()
+        {}
     }
 }

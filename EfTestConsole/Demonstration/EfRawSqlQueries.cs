@@ -1,12 +1,14 @@
 ﻿namespace EfTestConsole.Demonstration
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Data.Entity.Core.Objects;
     using System.Data.Entity.Infrastructure;
     using System.Linq;
     using System.Threading.Tasks;
 
+    using EfTest.AdventurWorks.Model.EfHelpers;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
     using EfTest.AdventureWorks.Model.Models;
@@ -33,6 +35,9 @@
 
                 GeneratePerformanceOutput(TestDbSetSqlQuery, "DbSet.SqlQuery", sql);
 
+                //Determine implications of setting isolation level to read uncomitted
+                //GeneratePerformanceOutput(TestDbSetSqlQueryWithTransaction, "DbSet.SqlQuery.WithTransaction", sql);
+
                 GeneratePerformanceOutput(TestDbSetSqlQueryAsNoTracking, "DbSet.SqlQuery.AsNoTracking()", sql);
 
                 using (new MeasureUtil("Dapper Serialisation"))
@@ -41,11 +46,25 @@
                     IEnumerable<Contact> contacts = contactRepository.Execute(sql);
                     DisplayContactListDetails(contacts.ToList());
                 }
+
+                using (new MeasureUtil("Massive Serialisation"))
+                using (var contactRepository = new EfTest.AdventureWorks.Data.SqlServer.Massive.Repositories.ContactRepository())
+                {
+                    IEnumerable<dynamic> contacts = contactRepository.Query(sql);
+                    DisplayContactListDetails(contacts.ToList());
+                }
+
                 Console.ReadKey();
             }
         }
 
         private static void DisplayContactListDetails(List<Contact> contactsList)
+        {
+            Console.WriteLine(contactsList.Count());
+            Console.WriteLine(contactsList.First().ToString());
+        }
+
+        private static void DisplayContactListDetails(List<object> contactsList)
         {
             Console.WriteLine(contactsList.Count());
             Console.WriteLine(contactsList.First().ToString());
@@ -92,6 +111,12 @@
         public static List<Contact> TestDbSetSqlQueryAsNoTracking(AdventureWorksContext context, string sql)
         {
             DbSqlQuery<Contact> contacts = context.Contacts.SqlQuery(sql).AsNoTracking();
+            return contacts.ToList();
+        }
+
+        public static List<Contact> TestDbSetSqlQueryWithTransaction(AdventureWorksContext context, string sql)
+        {
+            List<Contact> contacts = context.Contacts.SqlQuery(sql).ToListReadUncommitted();
             return contacts.ToList();
         }
 
