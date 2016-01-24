@@ -12,7 +12,7 @@
                 isolationLevel: isolationLevel);
         }
 
-        public static IDbContextScope<TDbContext> CreateReadOnly(IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
+        public static IDbContextScope<TDbContext> CreateReadOnly(IsolationLevel? isolationLevel = null)
         {
             return new DbContextScope<TDbContext>(
                 readOnly: true,

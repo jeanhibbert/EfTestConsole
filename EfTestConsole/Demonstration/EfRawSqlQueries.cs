@@ -1,7 +1,6 @@
 ﻿namespace EfTestConsole.Demonstration
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.Data.Entity.Core.Objects;
     using System.Data.Entity.Infrastructure;
@@ -11,6 +10,7 @@
     using EfTest.AdventurWorks.Model.EfHelpers;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
+    using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.UnitOfWork;
     using EfTest.AdventureWorks.Model.Models;
 
     using EfTestConsole.Helpers;
@@ -35,10 +35,16 @@
 
                 GeneratePerformanceOutput(TestDbSetSqlQuery, "DbSet.SqlQuery", sql);
 
-                //Determine implications of setting isolation level to read uncomitted
-                //GeneratePerformanceOutput(TestDbSetSqlQueryWithTransaction, "DbSet.SqlQuery.WithTransaction", sql);
+                GeneratePerformanceOutput(TestDbSetSqlQueryWithTransaction, "DbSet.SqlQuery.WithTransaction-ReadUncommitted", sql);
 
                 GeneratePerformanceOutput(TestDbSetSqlQueryAsNoTracking, "DbSet.SqlQuery.AsNoTracking()", sql);
+
+                using (new MeasureUtil("Custom rolled DbContext Scope"))
+                using (var scope = DbContextScopeFactory<AdventureWorksContext>.CreateReadOnly())
+                {
+                    IEnumerable<Contact> contacts = scope.Context.Contacts.Take(10000);
+                    DisplayContactListDetails(contacts.ToList());
+                }
 
                 using (new MeasureUtil("Dapper Serialisation"))
                 using (var contactRepository = new ContactRepository())

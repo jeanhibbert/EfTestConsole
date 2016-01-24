@@ -15,12 +15,10 @@
             //EfQueryGeneration.ShowSelect();
             //EfCaching.DemonstrateCaching();
             //EfDbMigrations.GenerateSqlUsingDbMigrator();
-
             EfRawSqlQueries.EfVsDapperTest();
-
             //EfBenchmarks.RunBenchmarks();
-
             //EfProductRepositoryTest.TestProductRepository();
+            //EfDbContextScope.EfDbContextScopeTest();
 
         }
 
