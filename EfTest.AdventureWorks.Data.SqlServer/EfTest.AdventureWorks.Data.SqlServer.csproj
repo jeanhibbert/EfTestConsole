@@ -59,6 +59,9 @@
     <Compile Include="EntityFramework\AdventureWorksContext.cs" />
     <Compile Include="EntityFramework\EntityFrameworkConfiguration.cs" />
     <Compile Include="EntityFramework\Repositories\ContactRepository.cs" />
+    <Compile Include="EntityFramework\UnitOfWork\DbContextScope.cs" />
+    <Compile Include="EntityFramework\UnitOfWork\DbContextScopeFactory.cs" />
+    <Compile Include="EntityFramework\UnitOfWork\IDbContextScope.cs" />
     <Compile Include="Massive\Repositories\ContactRepository.cs" />
     <Compile Include="Massive\Contacts.cs" />
     <Compile Include="Massive\Massive.cs" />

@@ -73,6 +73,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Demonstration\EfBenchmarks.cs" />
     <Compile Include="Demonstration\EfCaching.cs" />
+    <Compile Include="Demonstration\EfDbContextScope.cs" />
     <Compile Include="Demonstration\EfProductRepositoryTest.cs" />
     <Compile Include="Demonstration\EfQueryGeneration.cs" />
     <Compile Include="Demonstration\EfDbMigrations.cs" />
