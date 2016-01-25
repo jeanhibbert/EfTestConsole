@@ -77,6 +77,10 @@
     <Compile Include="Migrations\201601202209233_FullText_ProductName.Designer.cs">
       <DependentUpon>201601202209233_FullText_ProductName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601252250451_NewTestEntity1Table.cs" />
+    <Compile Include="Migrations\201601252250451_NewTestEntity1Table.Designer.cs">
+      <DependentUpon>201601252250451_NewTestEntity1Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\201601182300070_ContactIsDeleted.cs" />
     <Compile Include="Migrations\201601182300070_ContactIsDeleted.Designer.cs">
@@ -99,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601202209233_FullText_ProductName.resx">
       <DependentUpon>201601202209233_FullText_ProductName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601252250451_NewTestEntity1Table.resx">
+      <DependentUpon>201601252250451_NewTestEntity1Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

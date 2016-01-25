@@ -6,6 +6,7 @@ namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework
     using EfTest.AdventureWorks.Model.Models;
     using EfTest.AdventureWorks.Model.Models.Mapping;
     using EfTest.AdventureWorks.Data;
+using EfTest.AdventurWorks.Model.Models;
 
     public partial class AdventureWorksContext : DbContext, IUnitOfWork
     {
@@ -26,7 +27,9 @@ namespace EfTest.AdventureWorks.Data.SqlServer.EntityFramework
         void IUnitOfWork.SaveChanges()
         {
             base.SaveChanges();
-        }  
+        }
+
+        public DbSet<TestEntity1> TestEntity1s { get; set; }
 
         public DbSet<AWBuildVersion> AWBuildVersions { get; set; }
         public DbSet<DatabaseLog> DatabaseLogs { get; set; }

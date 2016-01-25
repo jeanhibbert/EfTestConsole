@@ -208,6 +208,7 @@
     <Compile Include="Models\StateProvince.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\StoreContact.cs" />
+    <Compile Include="Models\TestEntity1.cs" />
     <Compile Include="Models\TransactionHistory.cs" />
     <Compile Include="Models\TransactionHistoryArchive.cs" />
     <Compile Include="Models\UnitMeasure.cs" />

@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 
 namespace EfTest.AdventureWorks.Model.Models
 {
-    using EfTest.AdventurWorks.Model.EfHelpers;
+    using EfTest.AdventurWorks.Model.Models;
 
     //[SoftDelete("IsDeleted")]
     public partial class Contact
@@ -19,6 +18,7 @@ namespace EfTest.AdventureWorks.Model.Models
         }
 
         public bool IsDeleted { get; set; }
+        public virtual TestEntity1 TestEntity1 { get; set; }
 
         public int ContactID { get; set; }
         public bool NameStyle { get; set; }
