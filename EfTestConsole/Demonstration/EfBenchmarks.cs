@@ -13,24 +13,21 @@
 
     public static class EfBenchmarks
     {
-        #region Constants
-
         private const int IndividualKeysAmount = 10;
-        
+
         private const int LoopAmount = 2;
 
         private const bool PerformEagerLoadBenchmarks = true;
-                           // flag to signal whether the eager load fetch benchmarks have to be run. Not every bencher will perform this benchmnark.
+
+        // flag to signal whether the eager load fetch benchmarks have to be run. Not every bencher will perform this benchmnark.
 
         private const bool PerformIndividualBenchMarks = true;
-                           // flag to signal whether the single element fetch benchmarks have to be run.
+
+        // flag to signal whether the single element fetch benchmarks have to be run.
 
         private const bool PerformSetBenchmarks = true;
-                           // flag to signal whether the set fetch benchmarks have to be run.
 
-        #endregion
-
-        #region Static Fields
+        // flag to signal whether the set fetch benchmarks have to be run.
 
         private static readonly List<IBencher> RegisteredBenchers = new List<IBencher>();
 
@@ -41,10 +38,6 @@
 
         private static string SqlSelectCommandText =
             @"SELECT [SalesOrderID],[RevisionNumber],[OrderDate],[DueDate],[ShipDate],[Status],[OnlineOrderFlag],[SalesOrderNumber],[PurchaseOrderNumber],[AccountNumber],[CustomerID],[SalesPersonID],[TerritoryID],[BillToAddressID],[ShipToAddressID],[ShipMethodID],[CreditCardID],[CreditCardApprovalCode],[CurrencyRateID],[SubTotal],[TaxAmt],[Freight],[TotalDue],[Comment],[rowguid],[ModifiedDate]	FROM [Sales].[SalesOrderHeader]";
-
-        #endregion
-
-        #region Public Methods and Operators
 
         public static Assembly GetAssembly(Type type)
         {
@@ -83,10 +76,6 @@
             RunRegisteredBenchers();
             ReportResultStatistics(autoExit);
         }
-
-        #endregion
-
-        #region Methods
 
         private static void DisplayBencherInfo(IBencher bencher)
         {
@@ -570,7 +559,5 @@
                 ReportSetResult(result);
             }
         }
-
-        #endregion
     }
 }

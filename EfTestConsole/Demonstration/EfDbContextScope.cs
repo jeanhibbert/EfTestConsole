@@ -13,8 +13,6 @@
 
     public static class EfDbContextScope
     {
-        #region Public Methods and Operators
-
         public static void EfDbContextScopeTest()
         {
             using (
@@ -51,7 +49,5 @@
                 contextScope.SaveChanges();
             }
         }
-
-        #endregion
     }
 }

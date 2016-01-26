@@ -1,6 +1,5 @@
 ﻿namespace EfTestConsole.Demonstration
 {
-    using EfTest.AdventureWorks.Data.SqlServer;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework.Repositories;
 

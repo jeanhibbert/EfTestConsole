@@ -78,6 +78,7 @@
     <Compile Include="Demonstration\EfQueryGeneration.cs" />
     <Compile Include="Demonstration\EfDbMigrations.cs" />
     <Compile Include="Demonstration\EfRawSqlQueries.cs" />
+    <Compile Include="Demonstration\MassiveSandbox.cs" />
     <Compile Include="Helpers\IPagedList.cs" />
     <Compile Include="Helpers\MeasureUtil.cs" />
     <Compile Include="Helpers\ObjectQueryExtensions.cs" />

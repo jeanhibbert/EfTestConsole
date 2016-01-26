@@ -21,7 +21,7 @@
     {
         #region Public Methods and Operators
 
-        public static void EfVsDapperTest()
+        public static void EfVsMassiveVsDapperTest()
         {
             string sql = "Select Top 10000 * from Person.Contact";
 

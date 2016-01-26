@@ -3,10 +3,7 @@ using System.Linq;
 
 namespace EfTestConsole.Demonstration
 {
-    using EfTest.AdventureWorks.Data.SqlServer;
     using EfTest.AdventureWorks.Data.SqlServer.EntityFramework;
-    using EfTest.AdventureWorks.Model.Models;
-
     using EfTestConsole.Helpers;
 
     public class EfQueryGeneration

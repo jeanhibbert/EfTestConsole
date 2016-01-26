@@ -65,6 +65,7 @@
     <Compile Include="Massive\Repositories\ContactRepository.cs" />
     <Compile Include="Massive\Contacts.cs" />
     <Compile Include="Massive\Massive.cs" />
+    <Compile Include="Massive\TestEntity1.cs" />
     <Compile Include="Migrations\201601182249321_Initial.cs" />
     <Compile Include="Migrations\201601182249321_Initial.Designer.cs">
       <DependentUpon>201601182249321_Initial.cs</DependentUpon>
