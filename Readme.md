@@ -25,6 +25,8 @@ The EF Test Console project cleanly lays out an extensible data layer that uses 
 - Some unit tests around the repositoryies
 
 
+- Test
+
 
 
 ## General Notes and Todo Items
